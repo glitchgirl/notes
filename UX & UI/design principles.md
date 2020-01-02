@@ -11,3 +11,5 @@ Brutalist
 
 Brutalist
 	Making stuff super unaccessible :( edgy
+
+Skemurphoism is the design concept of making items represented resemble their real-world counterparts
