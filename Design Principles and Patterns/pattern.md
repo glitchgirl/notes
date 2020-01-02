@@ -11,3 +11,12 @@
 - The observer is a design pattern in which an object maintains a list of objects depending on its observers, automatically notifying them of any changes to the state.
 
 - Mixins and decorators can be used instead of subclassing
+
+- Constructor Pattern
+This is how you set up a constructor in JS, kinda like what you do with classes in something like C#
+
+`function Car(model, year, miles) {
+  this.model = model;
+  this.year = year;
+  this.miles = miles;
+}`
