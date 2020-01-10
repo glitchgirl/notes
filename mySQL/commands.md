@@ -3,3 +3,11 @@
 ## DESC
 
 describe table- sort of like show, but can apply other things to it.
+
+## AS
+
+aliasing - doesn't alter the table, but labels the data differently (good for joining)
+
+## DELETE
+
+Removes data, if `DELETE FROM <TABLE>` is ran it will empty the table, but is not the same as dropping a table
