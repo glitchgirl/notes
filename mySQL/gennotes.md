@@ -7,3 +7,7 @@ If you delete a database you are currently using, and then select that database 
 Rows are data, columns are types.
 
 where is case insenstive by default
+
+escape char is backslash
+
+underscore is return one char (any char)
