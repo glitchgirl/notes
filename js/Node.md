@@ -4,3 +4,5 @@ Node.js is an open-source, cross-platform, JavaScript run-time environment that 
 
 https://nodejs.org/api/
 Node.js is a runtime for js (like how the browser is for the reg js) written in c++ lets js run on the system
+
+Note: You must specify './' as a path of root folder to import a local module. However, you do not need to specify path to import Node.js core module or NPM module in the require() function.
