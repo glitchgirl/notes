@@ -23,3 +23,9 @@ Describe the communication options for the target resource.
 
 TRACE
 Performs a message loop back test along with the path to the target resource.
+
+---
+ACL - access control list
+NAT - network address translation.
+BGP ASN - border gateway protocol autonomous system numbers
+VIF - virtual interface

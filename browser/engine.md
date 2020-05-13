@@ -15,3 +15,5 @@ Gecko is a browser engine for firefox
 `-moz`
 
 Chromium - chrome
+
+Carnary is the newest version of chrome if you wanna play with that.
