@@ -1,4 +1,10 @@
-# Testing
+# Notes about development
+
+## Accessibility
+
+- ARIA
+
+## Testing
 
 - Cross-browser testing
 - Tools
@@ -81,9 +87,6 @@
 - Brutalist
 - SVG
 
-# Accessibility
-
-- ARIA
 
 # General Coding tips/notes
 
