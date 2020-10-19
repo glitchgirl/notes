@@ -7,3 +7,4 @@
 - Key and value for single things
 - multi values is a list
 - not the same thing as swarm mode
+- Swarm raft db is encrypted on disk

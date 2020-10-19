@@ -8,3 +8,5 @@
     - CLI tools - docker compose used for local dev/test automation with those yaml files
 - not meant for production load
     - up/setup/down down doesn't remove built containers
+- Doesn't have secrets
+- Override - auto brings up this fill (good for local) overrides deafult file
