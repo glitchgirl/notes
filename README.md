@@ -3,6 +3,49 @@
 ## Accessibility
 
 - ARIA
+- General
+
+## Azure dev ops
+- Readme
+
+## CI CD
+- General
+
+## Design Principles and Patterns
+- Pattern
+- Solid
+
+## Docker
+- Commands
+- Compose
+- General
+- Secrets
+- Swarm
+- volumes
+
+## ML-AL-Networks
+- .DS_Store
+- Kafka
+- Math
+- Math
+
+## React
+- Readme
+
+## UX & UI
+- Color
+- Design Principles
+
+## Work tips
+- WorkTips
+
+## Browser
+- Engine
+- Paint
+- WebStorage
+
+## Cms
+- Gennotes
 
 ## Testing
 
