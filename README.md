@@ -47,6 +47,35 @@
 ## Cms
 - Gennotes
 
+## Css
+- artchitecture
+- gennotes
+- selectors
+- transform
+
+## Elastic Search
+- Readme
+
+## Git 
+- cheatsheet
+
+## HTML
+- Gennotes
+- media Sizes
+- unit
+
+## JS
+- DOM
+- JSON & AJAX
+- Node
+- Async
+- Babel
+- Generators
+- Map Filter Reduce
+- Objects And This
+
+## 
+
 ## Testing
 
 - Cross-browser testing
