@@ -6,13 +6,13 @@
 
 ## What happens in docker container run?
 
-1) looks for that image locally in cache
-2) then looks in that remote image repo (docker hub)
-3) downlaods the latest version (unless specified)
-4) creates new container based on that image and prepares to start
-5) gives a virtual IP on a private network inside docker engine
-6) opens up ports if asked
-7) starts container by using the cmd in the dockerfile
+1. looks for that image locally in cache
+2. then looks in that remote image repo (docker hub)
+3. downloads the latest version (unless specified)
+4. creates new container based on that image and prepares to start
+5. gives a virtual IP on a private network inside docker engine
+6. opens up ports if asked
+7. starts container by using the cmd in the dockerfile
 
 - e = enviornment variables
 - d (detach runs in this the background, default is foreground)
@@ -25,3 +25,5 @@
 - inspect/stats
 - shell inside containers
 - using static IPs is an anti-pattern
+
+## Service Types

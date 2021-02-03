@@ -6,16 +6,20 @@
 - General
 
 ## Azure dev ops
+
 - Readme
 
 ## CI CD
+
 - General
 
 ## Design Principles and Patterns
+
 - Pattern
 - Solid
 
 ## Docker
+
 - Commands
 - Compose
 - General
@@ -24,47 +28,58 @@
 - volumes
 
 ## ML-AL-Networks
+
 - .DS_Store
 - Kafka
 - Math
 - Math
 
 ## React
+
 - Readme
 
 ## UX & UI
+
 - Color
 - Design Principles
 
 ## Work tips
+
 - WorkTips
 
 ## Browser
+
 - Engine
 - Paint
 - WebStorage
 
 ## Cms
+
 - Gennotes
 
 ## Css
+
 - artchitecture
 - gennotes
 - selectors
 - transform
 
 ## Elastic Search
+
 - Readme
 
-## Git 
+## Git
+
 - cheatsheet
 
 ## HTML
+
 - Gennotes
 - media Sizes
 - unit
 
 ## JS
+
 - DOM
 - JSON & AJAX
 - Node
@@ -75,6 +90,7 @@
 - Objects And This
 
 ## Math
+
 - .DS_Store
 - Linear algebra
 - Logic
@@ -82,25 +98,31 @@
 - Programmable matter
 - Sorting
 
-## mySQL 
+## mySQL
+
 - Commands
 - Gennotes
 
 ## Node
+
 - General
 - Node
 
 ## Npm
+
 - General
 - Lodash
 
 ## Postman
+
 - Readme
 
 ## Security
+
 - Gennotes
 
 ## Servers
+
 - AWS
 - HTTP requests
 - Gennotes
@@ -117,16 +139,17 @@
 - Mocha and chai
 
 ## Tools
-- Commandlineeditors
+
+- Command line editors
 - finding answers
 
 ## Ts
+
 - general
 
 ## Websocket
-- websocket
 
-## .DS_Store
+- websocket
 
 ## Readme
 
