@@ -27,3 +27,22 @@
 - using static IPs is an anti-pattern
 
 ## Service Types
+
+- Cluster IP
+
+  - single internal virtual IP
+  - only reachable from within cluster
+  - pods can reach service on apps
+
+- Node port
+
+  - high port allocated on each node
+
+- Load Balancer
+
+  - controls external endpoint
+  - only infra provider
+  - only for external stuff
+
+- External Name
+  - adds Cname to coreDNS creating a cluster IP service - expose

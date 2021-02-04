@@ -19,11 +19,16 @@
 - functional components
 
   - good for simple content
+  - don't work when we are waiting for info
+  - without hooks you can't change state
 
 - class components
 
   - class organization
   - state management
+  - must extend React.component
+  - must define a render method that returns some amount of JSX
+  - updating state on a component causes it to re-render
 
 ## Timeline of rendering
 
@@ -33,3 +38,15 @@
 - api/functions returns jsx
 - jsx is rendered as html
 - success! or error message
+
+## Rules of State
+
+- Only usable with class components
+- props DO NOT equal state
+- state is an object that contains data relevant to a component.
+- state must be initialized when a component is created.
+- state can only be updated using the function set.state
+
+## Higher order components
+
+- Fetch data and propagate to children
