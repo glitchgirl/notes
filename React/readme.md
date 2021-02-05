@@ -30,6 +30,12 @@
   - must define a render method that returns some amount of JSX
   - updating state on a component causes it to re-render
 
+- Containers
+
+  - wrap components
+  - runs components
+  - connects mapstate and dispatch
+
 ## Timeline of rendering
 
 - js loaded
@@ -50,3 +56,8 @@
 ## Higher order components
 
 - Fetch data and propagate to children
+
+## tips
+
+- to apply multiple classes in react you use string interpolation
+  "className=`${class.root}${class.text}`"
