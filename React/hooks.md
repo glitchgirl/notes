@@ -14,3 +14,4 @@
 3. [stuff] - run the first time AND ONLY when it re-renders with data (stuff) changes
 
 - case 2 is rare
+- can't be async
