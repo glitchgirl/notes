@@ -71,6 +71,7 @@
 ## Git
 
 - cheatsheet
+- conventional commits
 
 ## HTML
 
