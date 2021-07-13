@@ -5,6 +5,10 @@
 - ARIA
 - General
 
+## AWS
+
+- CCP training notes
+
 ## Azure dev ops
 
 - Readme
