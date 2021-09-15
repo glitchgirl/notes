@@ -15,3 +15,5 @@
 
 - case 2 is rare
 - can't be async
+
+If you need useEffect to be async, put an async function inside and call it 
