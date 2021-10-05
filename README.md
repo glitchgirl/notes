@@ -8,6 +8,10 @@
 ## AWS
 
 - CCP training notes
+- SES
+- EC2
+- RDS
+- SNI
 
 ## Azure dev ops
 
