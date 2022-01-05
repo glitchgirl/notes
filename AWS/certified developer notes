@@ -1,0 +1,38 @@
+General notes: 
+- read the test carefully (lots of select twos/ NOTS)
+- look for keywords: server, client, backend, cache, frontend, ELB, ALB, NLB
+
+Knowledge notes:
+
+- User Data is used to perform common automated config tasks and run scripts after the instance starts. Can pass two types of data, shell scripts and cloud-init directives as either plain text or file. 
+- SSE-C is server side encrpytion with customer provided keys
+- ALBs distribute traffic across multiple targets in multiple AZ. 
+- To use an HTTPS listener you must deploy at least one SSL/TLS cert on LB. As the instances behind the ALB are under heavy load, the LB will use the server cert to teminate the front-end connection and then decrypt requests before sending them to the instances.
+- Read capacity units (one strongly consistent read per second, or two eventually consistent reads per second, for an item up to 4KB in size) 
+- Write capacity units (one write per second for an item up to 1KB in size) ((items rounded up))
+- ECS - elastic container service (docker(and friends) management) 
+- Max AWS KMS size is 4KB
+- CloudFormation key words:
+  - !ImportValue = returns value of an output from another stack
+  - !Ref = returns value of a parameter or resource
+  - !GetAtt = returns the value of an attribute from a resource in the template
+  - !Sub = substitutes variables
+ - SQS uses a visibility timeout to prevent other consumers from receiving and processing the same message
+ 
+PRE-TEST 1)
+Score : 46
+Knowledge areas
+  - Deployment - 33%
+  - Security - 50%
+  - Refactoring - 50 %
+  - Development - 54 %
+  - Monitoring/Troubleshooting - 33%
+  
+  Test review notes:
+  Reducing latency with DynamoDB / OLTP should be done with global tables (if global users), and use eventually consistent reads instead of strongly consistent reads
+  DAX is for read heavy, not write heavy. 
+  User data features - run during boot cycle when first launched, and are executed with root user priv. 
+  Pass through doesn't terminate instances/connections so it doesn't reduce load. 
+  cloudformation reference = !ref 
+  access key id / secret key only used by AWS CLI, other services use commands like get-login
+  
