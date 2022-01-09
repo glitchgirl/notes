@@ -19,7 +19,7 @@ Knowledge notes:
   - !Sub = substitutes variables
  - SQS uses a visibility timeout to prevent other consumers from receiving and processing the same message
  
-PRE-TEST 1)
+PRE-TEST(take this on wednesday) 1)
 Score : 46
 Knowledge areas
   - Deployment - 33%
@@ -35,4 +35,49 @@ Knowledge areas
   Pass through doesn't terminate instances/connections so it doesn't reduce load. 
   cloudformation reference = !ref 
   access key id / secret key only used by AWS CLI, other services use commands like get-login
+  
+  Youtube video Review notes(37:12):
+  Elastic Beanstalk-
+    - PaaS - platform as a service (not recommended for large production loads)
+    - Powered by cloudformation 
+    - EC2 instance preconfig
+    - in place and blue/green
+    - dockerized env
+    - supported langs: ruby, python, php, tomcat, nodejs 
+   Deployment Policies
+    - All at once
+      - fastest dangerous
+      - deploy new app to all instances, out of service while deploying, comes up with new stuff
+    - Rolling 
+     - deploys new app a few at a time, takes a batch out, reattaches 
+    - Rolling with additional batch
+     - spin up new service, with new app, kill old apps
+     - never has reduced capacity
+    - Immutable
+     - safest, might be expensive
+     - new asg, deploy the updated version of the app to new EC2, point the ELB to the new ASG, then term the old one
+  Web vs Wroker
+  - web(load balanced env): 
+    - creates an ASG (auto scaling group)
+    - creates and ELB (elastic load balancer)
+    - designed to scale
+  - Single Instance Env
+    - uses an ASg set to one, no ELB, public IP
+    - cannot do rolling / rolling with batch deployments
+  - Worker:
+   - creates ASG
+   - SQS
+   - Sqsd daemon on EC2
+   - Creates cloudwatch alarms
+  
+  
+  Exam guide review:
+  
+  Sample question review:
+  
+  White Paper Review:
+  Architecting for the cloud: aws best practives
+  Practicing continous integration and continuous delivery on AWS acceleration software delivery with devops
+  Blue/Green deployments on AWS
+  Running containerized microservices on AWS 
   
