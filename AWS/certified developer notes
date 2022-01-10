@@ -36,7 +36,7 @@ Knowledge areas
   cloudformation reference = !ref 
   access key id / secret key only used by AWS CLI, other services use commands like get-login
   
-  Youtube video Review notes(37:12):
+  Youtube video Review notes(2:49:32):
   Elastic Beanstalk-
     - PaaS - platform as a service (not recommended for large production loads)
     - Powered by cloudformation 
@@ -44,6 +44,8 @@ Knowledge areas
     - in place and blue/green
     - dockerized env
     - supported langs: ruby, python, php, tomcat, nodejs 
+    - eb it's self is free, but services cost money
+    - don't need to worry about underlying infrastructure
    Deployment Policies
     - All at once
       - fastest dangerous
@@ -69,13 +71,46 @@ Knowledge areas
    - SQS
    - Sqsd daemon on EC2
    - Creates cloudwatch alarms
+  Configuration files
+   - options, server config(can put commands that run before setup here), custom resources
+   - .ebextensions
+   - .config
+  Environment manifest
+   - env.yml
+   CLI 
+   - eb init (sets up default)
+   - eb create first env
+   - status, health, events, logs, config, deploy, terminate
+   - eb open opens in browser
+  Custom images
+  - you can specify an AMI instead of the standard
+  - describe-platform-version
+  Database
+  - inside 
+    - generally for dev
+    - when EB env is terminated the db will also be terminated 
+  - outside
+    - for prod
+    - RDS sep from EB
+    - when EB env is terminated, db will remain
+    
+ Fargate
+ - can create empty ECS(elastic container service) cluster, then launch task as fargat
+ - don't have to provison containers
+ - define memory and vCPU
+ - add containers and allocate memory and vCPU
+ - choose VPC and submet
+ - apply security group, IAM to TASK 
+ - cold start
+ - runs as long as you want
+ - up to 30GB of memory
+ - provide your own containers
+ - more manual labour
+ 
+    
+Sample question review:
   
-  
-  Exam guide review:
-  
-  Sample question review:
-  
-  White Paper Review:
+White Paper Review:
   Architecting for the cloud: aws best practives
   Practicing continous integration and continuous delivery on AWS acceleration software delivery with devops
   Blue/Green deployments on AWS
