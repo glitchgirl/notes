@@ -18,7 +18,7 @@ Knowledge notes:
   - !GetAtt = returns the value of an attribute from a resource in the template
   - !Sub = substitutes variables
  - SQS uses a visibility timeout to prevent other consumers from receiving and processing the same message
- 
+ - ARN (amazon resource Name)
 PRE-TEST(take this on wednesday) 1)
 Score : 46
 Knowledge areas
@@ -36,7 +36,7 @@ Knowledge areas
   cloudformation reference = !ref 
   access key id / secret key only used by AWS CLI, other services use commands like get-login
   
-  Youtube video Review notes(2:49:32):
+  Youtube video Review notes(3:25:26):
   Elastic Beanstalk-
     - PaaS - platform as a service (not recommended for large production loads)
     - Powered by cloudformation 
@@ -58,7 +58,7 @@ Knowledge areas
     - Immutable
      - safest, might be expensive
      - new asg, deploy the updated version of the app to new EC2, point the ELB to the new ASG, then term the old one
-  Web vs Wroker
+  Web vs Worker
   - web(load balanced env): 
     - creates an ASG (auto scaling group)
     - creates and ELB (elastic load balancer)
@@ -107,6 +107,29 @@ Knowledge areas
  - provide your own containers
  - more manual labour
  
+ X-Ray
+ - What is mirco-service architecture? - ach/org approach to soft dev where softwarte is composed of small independent service that communicate over well defined APIs
+ - What is distributed tracing? method used to rpfoile and monitor apps, especially those with microservices, pinpoints failures and what causes poor performance.
+ - not exactly performance monitoring, but falls under that umbrella 
+ - console has visualization 
+ - api is behind a daemon
+ - there are x-ray sdks for language - interceptors, client handlers, http client
+ - aws sdk and cli
+ - Instrumenting - ability to monitor or measure the level of a product's performance, errors, and to write trace information
+ - Daemon makes JSON segment documents to the process / queue - acts as a buffer for the api
+ - it's installed already on serverless (lambda elastic beanstalk)
+ - Concepts
+  - segemnts = data from services, contains host, request, response, the work done, issues that occur
+  - subsegments = granular timing information and details about downstream calls that your app made to fulfill the original request. additonal details too. Need to include sdk
+  - traces = groups segments that have a common request, adds a trace id header
+  - sampling = doesn't store every trace, this keeps the cost low.
+  - filter expressions = narrow down specific paths/users 
+  - groups = assign filter expression to a group so its gets its own service graph, trace, and cloudwatch. if you update the group, it won't retro the data
+
+  - Annotations and Metadata - adds to the segment document 
+    - ann = indexed, key-value, up to 50
+    - key = UNIDEXED, key value, no limit
+  - service graph = the client, front-end, and backend services helps with bottlenecks/lactency/errors
     
 Sample question review:
   
