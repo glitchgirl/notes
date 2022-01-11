@@ -3,6 +3,8 @@
 - Can only be used in functional components.
 - Can't be called conditionally.
 - Don't use "use" for any function name because react will thinks its a hook
+- useDispatch()
+  - dispatches functions from the redux store
 
 ## Primitive hooks
 
