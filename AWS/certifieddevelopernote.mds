@@ -36,7 +36,7 @@ Knowledge areas
   cloudformation reference = !ref 
   access key id / secret key only used by AWS CLI, other services use commands like get-login
   
-  Youtube video Review notes(3:25:26):
+  Youtube video Review notes(4:16:57):
   Elastic Beanstalk-
     - PaaS - platform as a service (not recommended for large production loads)
     - Powered by cloudformation 
@@ -130,6 +130,74 @@ Knowledge areas
     - ann = indexed, key-value, up to 50
     - key = UNIDEXED, key value, no limit
   - service graph = the client, front-end, and backend services helps with bottlenecks/lactency/errors
+    
+ ACM 
+ - amazon cert manager
+ - ssl/tls
+ - public, private (400 a month)
+ - multiple subdomains, *
+ - terminating ssl at LB
+ - ssl end to end, complicated, but better 
+ 
+ Route 53
+ - DNS
+ - Record sets domains/subdomains
+ - Alias lets us select direct aws resources instead of ips
+ - routing policies (versioning)
+   - simple
+     - default
+     - 1 record, multiple IP
+     - random
+   - weighted
+     - splits up traffic based on different weights
+     - good for testing featurs
+   - latency based 
+     - lowest network latency for your end user
+     - requires a latency resource record to be set for resource that hosts your app
+   - failover
+     - active/passive setups
+     - auto health-checks, if fails goes to secondary location
+   - Geolocation
+     - based on geographic location
+   - Geoproximity
+    - have to use traffic flow to build
+    - use regions then create bias/boundaries 
+   - Multi-value
+     - same as simple, but with health checks
+  - Health checks
+   - every 30s by default
+   - init a failover
+   - chains
+  - resolver
+   - .2 resolver routes DNS queries between your VPCs and network
+   - for hybrid envs
+   
+SDK/CLI 
+- cloud9
+
+KMS
+- create, control, rotate encrpytion keys
+- multi-tenant Hardware Security Module (HSM)
+- cloud trail to audit access history
+- cloud HSM is single tenant, stricter compliance
+- customer master key
+- aws kms
+  - create0key
+  - encrypt
+  - decrypt
+  - re-encrypt
+  - enable-key-rotation (only for symmetric) 
+ - doesn't store data keys
+ 
+Cognito 
+ - web identity federation
+  - exchange identity and security info between an identity provider and an app
+ - Identity Provider
+  - something that provides a log in (saml, facebook)
+ - user pools
+  - allows users to sign in directly
+ - identity pools
+ - sync
     
 Sample question review:
   
