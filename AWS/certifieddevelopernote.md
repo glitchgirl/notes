@@ -196,9 +196,72 @@ Cognito
   - something that provides a log in (saml, facebook)
  - user pools
   - allows users to sign in directly
+  - JWTs to persist auth
  - identity pools
- - sync
+   - actual mechanism that authorizies access to services
+ - Sync
+   - SNS to sync user data and preferences accros user devices
+  
+ SNS
+  - simple notification service
+  - all stuff stored accross multiple AZs
+  - only plain emails, if fancy emails needed, need SES
+  - topics
+     - logical access point, communication channel
+     - allows you to group subscriptions together
+     - able to deliver to multiple protocols
+  - subscriptions
+    - created to topics
+    - only one protocol and one topic
+  - Application as subscriber
+    - send push notification messages directly to apps via mobile devices
+  - publish/subscribe = messaging systems. doesn't send to end user, sends to bus, the groups, then the subs subscribe to groups
+  - managed pub/sub messaging, decouples distributed systems and serverless apps
+  - pub push to SNS topic
+  - sub subsribed to have events to pushed to them
     
+SQS
+- simple queue system
+- used to provide async communication and decouple processes via messages / events
+- producer and consumer
+- not real time
+- not a stream
+- application integration via aws sdk
+- pull based
+- default vis is 30 seconds
+
+Kinesis
+- collection, processing, and anlyzing streaming data
+- real time
+- data streams
+  - 24 hr default persisant 
+  - producers (make data)
+  - shards
+  - consumers (use data)
+ - Firehose
+  - producers
+  - transform/compress/secure
+  - immediately disappears
+  - one consumer
+  - only pay for what you consume
+ - video streams
+   - from camera
+   - secures and retains
+   - consumers / ML
+ - data analytics
+  - pass firehose or data streams as a an input and an output to do real time analytics. expensive   
+
+SSM parameter store
+- store data (passwords, license codes)
+- creates hierarchies by using forwards slashes
+- can't revert advanced to standard
+- policies
+  - making you update passwords
+  - assign multiple policies    
+
+Secerts manager
+- db creds
+
 Sample question review:
   
 White Paper Review:
