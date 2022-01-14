@@ -4,21 +4,21 @@ General notes:
 
 Knowledge notes:
 
-- User Data is used to perform common automated config tasks and run scripts after the instance starts. Can pass two types of data, shell scripts and cloud-init directives as either plain text or file. 
-- SSE-C is server side encrpytion with customer provided keys
-- ALBs distribute traffic across multiple targets in multiple AZ. 
-- To use an HTTPS listener you must deploy at least one SSL/TLS cert on LB. As the instances behind the ALB are under heavy load, the LB will use the server cert to teminate the front-end connection and then decrypt requests before sending them to the instances.
-- Read capacity units (one strongly consistent read per second, or two eventually consistent reads per second, for an item up to 4KB in size) 
-- Write capacity units (one write per second for an item up to 1KB in size) ((items rounded up))
-- ECS - elastic container service (docker(and friends) management) 
-- Max AWS KMS size is 4KB
-- CloudFormation key words:
-  - !ImportValue = returns value of an output from another stack
-  - !Ref = returns value of a parameter or resource
-  - !GetAtt = returns the value of an attribute from a resource in the template
-  - !Sub = substitutes variables
- - SQS uses a visibility timeout to prevent other consumers from receiving and processing the same message
- - ARN (amazon resource Name)
+ - User Data is used to perform common automated config tasks and run scripts after the instance starts. Can pass two types of data, shell scripts and cloud-init directives as either plain text or file. 
+ - SSE-C is server side encrpytion with customer provided keys
+ - ALBs distribute traffic across multiple targets in multiple AZ. 
+ - To use an HTTPS listener you must deploy at least one SSL/TLS cert on LB. As the instances behind the ALB are under heavy load, the LB will use the server cert to teminate the front-end connection and then decrypt requests before sending them to the instances.
+ - Read capacity units (one strongly consistent read per second, or two eventually consistent reads per second, for an item up to 4KB in size) 
+ - Write capacity units (one write per second for an item up to 1KB in size) ((items rounded up))
+ - ECS - elastic container service (docker(and friends) management) 
+ - Max AWS KMS size is 4KB
+ - CloudFormation key words:
+   - !ImportValue = returns value of an output from another stack
+   - !Ref = returns value of a parameter or resource
+   - !GetAtt = returns the value of an attribute from a resource in the template
+   - !Sub = substitutes variables
+  - SQS uses a visibility timeout to prevent other consumers from receiving and processing the same message
+  - ARN (amazon resource Name)
 PRE-TEST(take this on wednesday) 1)
 Score : 46
 Knowledge areas
@@ -29,15 +29,15 @@ Knowledge areas
   - Monitoring/Troubleshooting - 33%
   
   Test review notes:
-  Reducing latency with DynamoDB / OLTP should be done with global tables (if global users), and use eventually consistent reads instead of strongly consistent reads
-  DAX is for read heavy, not write heavy. 
-  User data features - run during boot cycle when first launched, and are executed with root user priv. 
-  Pass through doesn't terminate instances/connections so it doesn't reduce load. 
-  cloudformation reference = !ref 
-  access key id / secret key only used by AWS CLI, other services use commands like get-login
+ - Reducing latency with DynamoDB / OLTP should be done with global tables (if global users), and use eventually consistent reads instead of strongly consistent reads
+ - DAX is for read heavy, not write heavy. 
+ - User data features - run during boot cycle when first launched, and are executed with root user priv. 
+ - Pass through doesn't terminate instances/connections so it doesn't reduce load. 
+ - cloudformation reference = !ref 
+ - access key id / secret key only used by AWS CLI, other services use commands like get-login
   
   Youtube video Review notes(5:36:00):
-  Elastic Beanstalk-
+ - Elastic Beanstalk
     - PaaS - platform as a service (not recommended for large production loads)
     - Powered by cloudformation 
     - EC2 instance preconfig
@@ -46,10 +46,10 @@ Knowledge areas
     - supported langs: ruby, python, php, tomcat, nodejs 
     - eb it's self is free, but services cost money
     - don't need to worry about underlying infrastructure
-   Deployment Policies
+  - Deployment Policies
     - All at once
-      - fastest dangerous
-      - deploy new app to all instances, out of service while deploying, comes up with new stuff
+     - fastest dangerous
+     - deploy new app to all instances, out of service while deploying, comes up with new stuff
     - Rolling 
      - deploys new app a few at a time, takes a batch out, reattaches 
     - Rolling with additional batch
@@ -58,7 +58,7 @@ Knowledge areas
     - Immutable
      - safest, might be expensive
      - new asg, deploy the updated version of the app to new EC2, point the ELB to the new ASG, then term the old one
-  Web vs Worker
+ - Web vs Worker
   - web(load balanced env): 
     - creates an ASG (auto scaling group)
     - creates and ELB (elastic load balancer)
@@ -71,30 +71,30 @@ Knowledge areas
    - SQS
    - Sqsd daemon on EC2
    - Creates cloudwatch alarms
-  Configuration files
+  - Configuration files
    - options, server config(can put commands that run before setup here), custom resources
    - .ebextensions
    - .config
-  Environment manifest
+  - Environment manifest
    - env.yml
-   CLI 
+  - CLI 
    - eb init (sets up default)
    - eb create first env
    - status, health, events, logs, config, deploy, terminate
    - eb open opens in browser
-  Custom images
+ - Custom images
   - you can specify an AMI instead of the standard
   - describe-platform-version
-  Database
+- Database
   - inside 
-    - generally for dev
-    - when EB env is terminated the db will also be terminated 
+   - generally for dev
+   - when EB env is terminated the db will also be terminated 
   - outside
-    - for prod
-    - RDS sep from EB
-    - when EB env is terminated, db will remain
+   - for prod
+   - RDS sep from EB
+   - when EB env is terminated, db will remain
     
- Fargate
+- Fargate
  - can create empty ECS(elastic container service) cluster, then launch task as fargat
  - don't have to provison containers
  - define memory and vCPU
@@ -107,7 +107,7 @@ Knowledge areas
  - provide your own containers
  - more manual labour
  
- X-Ray
+- X-Ray
  - What is mirco-service architecture? - ach/org approach to soft dev where softwarte is composed of small independent service that communicate over well defined APIs
  - What is distributed tracing? method used to rpfoile and monitor apps, especially those with microservices, pinpoints failures and what causes poor performance.
  - not exactly performance monitoring, but falls under that umbrella 
@@ -145,25 +145,25 @@ Knowledge areas
  - Alias lets us select direct aws resources instead of ips
  - routing policies (versioning)
    - simple
-     - default
-     - 1 record, multiple IP
-     - random
+    - default
+    - 1 record, multiple IP
+    - random
    - weighted
-     - splits up traffic based on different weights
-     - good for testing featurs
+    - splits up traffic based on different weights
+    - good for testing featurs
    - latency based 
-     - lowest network latency for your end user
-     - requires a latency resource record to be set for resource that hosts your app
+    - lowest network latency for your end user
+    - requires a latency resource record to be set for resource that hosts your app
    - failover
-     - active/passive setups
-     - auto health-checks, if fails goes to secondary location
+    - active/passive setups
+    - auto health-checks, if fails goes to secondary location
    - Geolocation
-     - based on geographic location
+    - based on geographic location
    - Geoproximity
     - have to use traffic flow to build
     - use regions then create bias/boundaries 
    - Multi-value
-     - same as simple, but with health checks
+    - same as simple, but with health checks
   - Health checks
    - every 30s by default
    - init a failover
