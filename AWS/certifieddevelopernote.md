@@ -36,7 +36,7 @@ Knowledge areas
   cloudformation reference = !ref 
   access key id / secret key only used by AWS CLI, other services use commands like get-login
   
-  Youtube video Review notes(4:16:57):
+  Youtube video Review notes(5:36:00):
   Elastic Beanstalk-
     - PaaS - platform as a service (not recommended for large production loads)
     - Powered by cloudformation 
@@ -261,6 +261,70 @@ SSM parameter store
 
 Secerts manager
 - db creds
+- can manage other db too
+- can manage other secrets in a key/value store
+- enforees encrpytion at-rest
+- expensive than store
+- cloud trail
+- Automatic rotation
+- describe secret - version and access and such
+- get-secert-value
+
+Dynamo DB
+- document no sql database
+- not relation, doesn't use sql
+- key value store
+- fully maaged
+- durable
+- built-in secury
+- eventual consistent reads (default), possible inconsistent, but faster
+- strongly consistent reads, consistent, slower
+- read capacity units
+- write capacity
+- items = rows
+- attributes collumns
+- keys = id
+- have to set a primary key, can't be reset 
+- only have partition key, internal hash function to decide where data gets partitioned
+- should try to divide data evenly
+- composite keys (partition and sort key) has to be unique in the comp. still is hashed, but is grouping data closer together
+- values = data
+- no date type in dynamo
+- Partition - allocation of storage for a table, auto-created 
+- for every 10GB, when you exceed the RCUs or the WCUS
+- each partition has a max of 3000 RCUS, 1000WCUs
+- Query
+  - FIND ITEMS IN A TABLE BASED ON PRIMARY KE VALUES, ANY TABLE, OR SECONDARY INDEX THAT HAS A COMPOSITE id
+  - eventually consistent
+- Scan
+  - through all items, return one or more items through filters
+  - returns everything, so can be slow, use a lot of resources
+- Provisioned throughput capacity max about of capacity or write per second 
+- if you go beyond capacity, it will throw erros
+- On-demand capacity, pay per request, good for new tables, unpredictable loads, default limits: 40,000 RCUs/WCUs. can be expensive 
+- Calculating reads
+  - one strongly consistent read pper second or two eventually consistent reada per seconds for an item 4kb in size
+  - strong: round up to 4, divided by 4, times by number of reads
+  - eventual: round up to 4, divide by 4, times by number of reads, divide by 2, round to nearest whole number
+- Calculating writes 
+ - one write per second, per an item up to 1kb
+ - round data up to 1, times by number of writes
+- Global tables
+  - mutli0-region
+  - KMS CMK
+  - enable streams
+  - steam type of new and old imaage      
+ - Transaction 
+   - represents a change that will occur to the database, transactions are ACID
+   - will rollback as if the database changes never occurred. 
+   - all or nothing, across table
+   - transactWriteItems
+   - TransactGetItems 
+   - perpars, and commits 
+   - conditionalcheck 
+ - TTL, allows items to expire, good for temporary continous data
+ - Streams capturs every modification to data items so you can react to those changes
+
 
 Sample question review:
   
