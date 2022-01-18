@@ -36,7 +36,7 @@ Knowledge areas
  - cloudformation reference = !ref 
  - access key id / secret key only used by AWS CLI, other services use commands like get-login
   
-  Youtube video Review notes(5:36:00):
+  Youtube video Review notes(6:59:27):
  - Elastic Beanstalk
     - PaaS - platform as a service (not recommended for large production loads)
     - Powered by cloudformation 
@@ -284,6 +284,7 @@ Dynamo DB
 - items = rows
 - attributes collumns
 - keys = id
+- sort = range
 - have to set a primary key, can't be reset 
 - only have partition key, internal hash function to decide where data gets partitioned
 - should try to divide data evenly
@@ -323,8 +324,33 @@ Dynamo DB
    - perpars, and commits 
    - conditionalcheck 
  - TTL, allows items to expire, good for temporary continous data
- - Streams capturs every modification to data items so you can react to those changes
-
+ - Streams captures every modification to data items so you can react to those changes
+ - Errors
+  - throttling execptions likely from createTable, updateTable, deleteTable
+  - ProvisionedThroughtputExceededException - you exceeded your maximum allowed provisioned throughtput for a table for one or more global secondary indexes, SDK will auto retry with exponential backoffs
+ - Secondary Indexes
+  - an idex is a copy of selected columns of data in a databse
+  - LSI local secondary index (only created with initial table, can't edit it later)
+   - scoped to base table partition, has the same partition key value
+   - shares provisioned throughput
+   - limited to 5 per table 
+   - sort should be different
+   - can be strongly consistent
+  - GSI global secondary index    
+   - queries on the index can span all of the data in the base table across all partitions
+   - no size rescrtions
+   - can be added, modified, or deleted anytime
+   - can be different from the base table
+   - sort key is optional
+   - uses its own capacity 
+ - DAX 
+  - in-memory cache
+  - one or more nodes
+  - fastest time 
+  - small number of items that get read a lot
+  - read-intensive
+  - not great for write intensice, apps already using cache (elastic cache)
+  -   
 
 Sample question review:
   
