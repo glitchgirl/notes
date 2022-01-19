@@ -36,7 +36,7 @@ Knowledge areas
  - cloudformation reference = !ref 
  - access key id / secret key only used by AWS CLI, other services use commands like get-login
   
-  Youtube video Review notes(6:59:27):
+  Youtube video Review notes(7:17:44):
  - Elastic Beanstalk
     - PaaS - platform as a service (not recommended for large production loads)
     - Powered by cloudformation 
@@ -350,7 +350,75 @@ Dynamo DB
   - small number of items that get read a lot
   - read-intensive
   - not great for write intensice, apps already using cache (elastic cache)
-  -   
+    
+ EC2
+  - elastic compute cloud highly configureable server, resizable compute capacity
+  - AMI (amazon machine image)
+  - Instance Types (nano 8xLarge)
+    - General purpose
+     - A1, T3, T2 - web severs / code
+    - Compute optimized
+     - C - gamcing servers/ scienctic modeling
+    - Memory optimized
+     - R, X, high memory
+    - Acceraled optimized
+     - P G F machine learning      
+  - Storage
+  -  I D H noSQL /data warehousing
+  -  Network Throughput
+  - Instance sizes
+   - generally double in price and key attributes (roughly)
+  - Instance profile
+   - instead of embedding you aws creds in your code, you attach a role to an instance via Instance Profile
+   - always avoid embedding your aws credentials
+  - Placement groups
+   - free, optional, logical placement
+   - Cluster - inside AZ, can't be multiple AZ
+   - Partition
+   - Hadoop / Kafka
+   - Spread - critical multiple AZ
+  - UserData
+   - script that with be automatically run when you launch an EC2 instance, installs packages/updates/etc
+   - 169.254.169.254/latest/user-data
+  -  MetaData
+  -  same end point, gets information
+VPC
+ - virtual private cloud
+  - region specfic - do not span
+  - 5 vpc per region 
+  - every region comes with a default
+   - /16 IPv4 cidr block
+   - /20 default subnet in each AZ
+   - Internet gateway connects to VPC
+   - Security group associated with VPC
+   - NACL associated
+   - associate teh default DHCP(dynamic host configuration protocol)
+  - 0.0.0.0/0 - default, it repesents all possible IP addresses (access from anywhere)
+  - 200 subnets per vpc
+  - can use both ipv6 and ipv4
+  - most things are free except: NAT gateway, VPC endpoints, VPN gateway, Customer gateway
+  - DNS hostnames, have to turn them on
+ - virtual networking environment
+ - personal data centre
+ - Internet Gateway (IGW)
+ - Virtual Private Gateway (VPN Gateway)
+ - Routing Tables
+ - Network access control lists (NACLS) - stateless
+ - Security Groups (SG) stateful
+ - Public submets
+ - Private subnets
+ - Nat gateway
+ - Customer Gateway
+ - VPC endpoints
+ - VPC peering
+  - allows you to connect one VPC to another over a direct network routing using private IP addresses
+  - behave like they are on the same network
+  - same or different accounts/regions
+  - peering uses a star configuration 1 central VPC to four other VPCs
+  - no transitive peering
+  - no overlapping cidr blocks
+  - 
+
 
 Sample question review:
   
