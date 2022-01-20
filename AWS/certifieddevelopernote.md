@@ -36,7 +36,7 @@ Knowledge areas
  - cloudformation reference = !ref 
  - access key id / secret key only used by AWS CLI, other services use commands like get-login
   
-  Youtube video Review notes(7:17:44):
+  Youtube video Review notes(7:54:30):
  - Elastic Beanstalk
     - PaaS - platform as a service (not recommended for large production loads)
     - Powered by cloudformation 
@@ -401,10 +401,19 @@ VPC
  - virtual networking environment
  - personal data centre
  - Internet Gateway (IGW)
+   - allows your vpc access to the internet
+   - performs network address translation for instances that have a public ip
  - Virtual Private Gateway (VPN Gateway)
  - Routing Tables
+  - where network traffic is directed
+  - each subnet in your vpc must be associted with a route table
+  - one route table a time per subnet, but one table can be used by multiple subnets 
  - Network access control lists (NACLS) - stateless
  - Security Groups (SG) stateful
+  - a virtual firewall at the instance level
+  - inbound and outboound
+  - all traffic is blocked by defautl unless a rule specifically allows it
+  - 60 rules per group  
  - Public submets
  - Private subnets
  - Nat gateway
@@ -417,14 +426,79 @@ VPC
   - peering uses a star configuration 1 central VPC to four other VPCs
   - no transitive peering
   - no overlapping cidr blocks
-  - 
-
-
+ - Bastion / Jumpbox
+   - private subnet NATS can't be used bastions
+   - used sessions manager now instead 
+ - Direct connect
+  - used for estlishing dedicated network for on prem
+- Ec2 Auto Scaling group
+ - automatic scaling management (capacity or rules)
+ - min, max, desired
+ - health check replacements (ec2 and elb) 
+ - scaling policies (out = more, in = less)
+  - target tracking
+  - simple scaling when an alarm is breached - this is legacy
+  - scaling policies with steps (use this one) alarm is breached, escaltes based on alarm
+ - lauch configuration, makes a template but can't be edited, you have to create a new one/clone
+ - lauch templates - has versions
+- VPC endpoints
+ - interface endpoints
+  - elastic network interface with a private ip address
+  - entry point for traffic going to a supported service 
+  - cost money
+ - gateway endpoints
+  - target for a specfic route in your route table
+  - free
+  - mostly for dynamo and s3
+ - keeps traffic in aws network, doesn't need a public ip address 
+- Elastic load balancer
+ - at least two AZ
+ - you must create one per region 
+ - can attach ACM SSL 
+ - physical hardward or sorware that accepts incoming traffic and then distrubes it
+ - listeners
+  - listen traffic, evaulate 
+ - rules
+  - only for ALB 
+ - target groups 
+ - ALB
+  - designed to balance HTTP/HTTPS 
+  - layer 7 of OSI (application)
+  - request routing rules
+  - WAF can be attached 
+  - web apps
+ - NLB
+  - tcp.udp
+  - transport layer 4
+  - games
+  - network perform most importance 
+ - CLB
+  - can use 7 or 4, but not both
+  - legancy 
+  - it will respond with 504 if app isn't working
+  - recommened to use other LB
+ - sticky session
+  - bind a user session to a specific instance
+  - cookies
+  - CLB and ALB
+ - X-Forwarded-For header
+ - if you need the IPv4 address of a user, use this header
+ - so you don't get the lb address
+- health checks
+ - doesn't kill, just redirects 
+- cross-zone load balancing
+ - NLB/CLB
+ - in all enabled availabiity zones
+- Request routing
+ - ALB
+ - apply rules to forward or redirect or auth 
+ - subdomains and such   
+ 
 Sample question review:
   
 White Paper Review:
-  Architecting for the cloud: aws best practives
-  Practicing continous integration and continuous delivery on AWS acceleration software delivery with devops
-  Blue/Green deployments on AWS
-  Running containerized microservices on AWS 
-  
+ - Architecting for the cloud: aws best practives
+ - Practicing continous integration and continuous delivery on AWS acceleration software delivery with devops
+ - Blue/Green deployments on AWS
+ - Running containerized microservices on AWS 
+ 
