@@ -36,7 +36,7 @@ Knowledge areas
  - cloudformation reference = !ref 
  - access key id / secret key only used by AWS CLI, other services use commands like get-login
   
-  Youtube video Review notes(7:54:30):
+  Youtube video Review notes(9:10:56):
  - Elastic Beanstalk
     - PaaS - platform as a service (not recommended for large production loads)
     - Powered by cloudformation 
@@ -409,6 +409,11 @@ VPC
   - each subnet in your vpc must be associted with a route table
   - one route table a time per subnet, but one table can be used by multiple subnets 
  - Network access control lists (NACLS) - stateless
+  - act as a virtual firewall at the subnet level
+  - VPCs get a default
+  - can allow or deny traffic in and out
+  - rule number from lowest to highest - order of evaluation
+  - subnets are associated with NACLS
  - Security Groups (SG) stateful
   - a virtual firewall at the instance level
   - inbound and outboound
@@ -493,6 +498,76 @@ VPC
  - ALB
  - apply rules to forward or redirect or auth 
  - subdomains and such   
+ 
+ Identity Access Management (IAM)
+  - IAM users
+   - can belong to a group 
+   - can assign roles directly
+   - can attach policies directly
+  - IAM groups
+   - roles are applied to groups
+  - IAM roles
+   - can attach policies, multiple
+   - can be attached to aws resources
+  - IAM policies
+  - its a json with sttatements, SId, effects (allow or deny), principal (thing you want to apply to), action, resource, conditions
+   - Managed policies
+    - made by AWS
+    - can't edit 
+   - customer manager policies
+    - made by you
+    - can be editted 
+   - inline policies
+    - for just one resource 
+  - IAM identities
+  - Password policies
+  - Programmic access keys
+   - allows useres to interact with aws service programmatically via the cli or sdk
+  - MFA
+   - can be turned on by user, for user
+  - Temporary security credentials
+   - like PAK, but temp
+   - basis roles and identity federation
+  -  Identity Federation
+   - linking a persons identity and attributes stored across multiple distinct identity management systesm
+   - SAML / enterprise
+   - Web identity federation 
+   - facebook, google, aws, - OICD 2 built on OAuth
+  - Security Token Service
+    -   global service
+    -   temporary limitied privilege credentials
+    -   access key id
+    -   secret access key
+    -   session token
+    -   expiration
+    -   API
+     - assume role with web identity 
+     - web , then aws token
+     - cross account roles
+      - allows user to access resources in another account via roles  
+  -  Cloudfront
+   -  cdn
+   -  geographical location
+   -  origin of webpage
+   -  content delivery server
+   -  edge location 
+   -  distributions
+    - collection of edge locations
+    - behaviours
+    - invalidations
+    - price class decides how it replicaties (all, just us ande europe, etc)
+    - error pages
+    - restrctions  
+    - lambda@Edge
+     - viewer request
+     - origin request
+     - origin response
+     - viewer response
+    - protection
+     - Original identity access
+     - virtual user identity used to get private objects
+     - signed urls / signed cookies
+     - not the same thing as presigned url (only for s3) 
  
 Sample question review:
   
