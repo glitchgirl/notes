@@ -36,7 +36,7 @@ Knowledge areas
  - cloudformation reference = !ref 
  - access key id / secret key only used by AWS CLI, other services use commands like get-login
   
-  Youtube video Review notes(9:10:56):
+  Youtube video Review notes(10:00:23):
  - Elastic Beanstalk
     - PaaS - platform as a service (not recommended for large production loads)
     - Powered by cloudformation 
