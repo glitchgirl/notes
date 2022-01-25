@@ -568,7 +568,64 @@ VPC
      - virtual user identity used to get private objects
      - signed urls / signed cookies
      - not the same thing as presigned url (only for s3) 
- 
+  - Cloudtrail
+   - montiors api calls
+   - governance, compliance, operational auditing, risk auditing 
+   - event history
+   - keeps stuff for 90 days, if you want more then you need create a custom trail, athena
+   - log all regions
+   - across all accounts in an organization
+   - encrpytion
+   - log file validation (lets you know if the logs have been touched)
+   - can be sent to cloud watch
+   - management events
+    - configuring security
+    - registering devices
+    - configuring rules for routing data
+    - setting up logging 
+   - data events
+    - s3
+    - lambda
+    - turned off by defualt 
+   -  Cloudformation
+   -  infrastructure as code - managing and provisoning computer data centers through machine-readable definition files rather than physical hardware configuration or config tools
+   -  templates must have at least one resource 
+   -  quickstarts collection of pre-built cloudformation templates
+   -  stack updates
+    - can modifiy the template and then update the stack
+    - direct - update and immediately deploy
+    - executing change sets - preview changes then confirm
+    - update with no interuption - update without interupting operation and without changing resource id
+    - update with some interruption - retains physical id
+    - replacement - deletes old one, new physical id
+    - preventing stack updates (i.e. RDS interruption to service)
+    - stackpolicy - set to deny
+    - nested stack 
+     - reference CFN templates inside of another CRN template
+     - modular
+     - large templates
+    - drift detection
+     - drift - stack is different than the cloudformation
+     - ad-hoc versus using cloudformation stack updates
+     - doesn't nest down
+    - rollbacks
+     - create, update, destroy
+     - turned on by default
+    - psuedo parameters
+     - !ref 'AWS::region'
+    - resource attributes
+     - creation policy
+     - deletion policy
+     - update policy- asg, elasticcache, domain, lambda alias
+     - update replace polict
+     - dependson - resource is only created after the speficed resource is created
+    - Intrinsic function
+     - assign values to properties taht not available until run time
+     - Fn::ImportValue
+     - Fn::GetAtt
+      - returns the value of an attribute from a resource in the template 
+     - Ref 
+      - returns the value of the specified parameter or resource           
 Sample question review:
   
 White Paper Review:
