@@ -19,7 +19,9 @@ Knowledge notes:
    - !Sub = substitutes variables
   - SQS uses a visibility timeout to prevent other consumers from receiving and processing the same message
   - ARN (amazon resource Name)
-PRE-TEST(take this on wednesday) 1)
+
+  
+PRE-TEST 1)
 Score : 46
 Knowledge areas
   - Deployment - 33%
@@ -27,6 +29,16 @@ Knowledge areas
   - Refactoring - 50 %
   - Development - 54 %
   - Monitoring/Troubleshooting - 33%
+
+PRE-TEST 2)
+Score : 50
+Knowledge areas
+  - Deployment - 58%
+  - Security - 43%
+  - Refactoring - 100 %
+  - Development - 42 %
+  - Monitoring/Troubleshooting - 56%
+
   
   Test review notes:
  - Reducing latency with DynamoDB / OLTP should be done with global tables (if global users), and use eventually consistent reads instead of strongly consistent reads
@@ -35,6 +47,9 @@ Knowledge areas
  - Pass through doesn't terminate instances/connections so it doesn't reduce load. 
  - cloudformation reference = !ref 
  - access key id / secret key only used by AWS CLI, other services use commands like get-login
+  - members will be able to see the organixation trail but cannot modify or delete it
+  - auto scaling cannot add a volume to an existin ginstance if the existing volume is approaching capacity
+  - SWF ensures the task is assigned only once while sqs may deliver the message multiple times
   
   Youtube video Review notes Video 1 :
   https://www.youtube.com/watch?v=RrKRN9zRBWs
