@@ -36,7 +36,8 @@ Knowledge areas
  - cloudformation reference = !ref 
  - access key id / secret key only used by AWS CLI, other services use commands like get-login
   
-  Youtube video Review notes(11:20:51):
+  Youtube video Review notes Video 1 :
+  https://www.youtube.com/watch?v=RrKRN9zRBWs
  - Elastic Beanstalk
     - PaaS - platform as a service (not recommended for large production loads)
     - Powered by cloudformation 
@@ -682,6 +683,17 @@ VPC
      - ec2, on-prem lambda or ECS
      - raipd
      - in place blue/green  
+     - application
+      - deployment groups - ec2 or lambda 
+      - deployment
+      - deployment configuration
+      - appspec file 
+      - revision
+      - code deploy agent
+      - you need to install this
+      - code deploy service role - based on your deployment strategy
+Youtube video notes (0:14:59):
+https://www.youtube.com/watch?v=eCopK1RoyFM&t=0s
 
 
 Sample question review:
