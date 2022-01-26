@@ -36,7 +36,7 @@ Knowledge areas
  - cloudformation reference = !ref 
  - access key id / secret key only used by AWS CLI, other services use commands like get-login
   
-  Youtube video Review notes(10:00:23):
+  Youtube video Review notes(11:20:51):
  - Elastic Beanstalk
     - PaaS - platform as a service (not recommended for large production loads)
     - Powered by cloudformation 
@@ -625,7 +625,65 @@ VPC
      - Fn::GetAtt
       - returns the value of an attribute from a resource in the template 
      - Ref 
-      - returns the value of the specified parameter or resource           
+      - returns the value of the specified parameter or resource      
+     - wait conditions
+      - stack resource creation
+      - track status
+   - CDK 
+    - cloud development kit
+     - transpiles
+     - imperative infrastructure
+      - more flexible, lesss certain, write less 
+     - declaracative instrastructue 
+      - explict, less flexible, more certian, write more 
+   - Serverless Application Model
+    - cloudformation for serverless stuff
+    - cli tool
+     - run, packae, deploy serverless apps or lambdas  
+    - cloudformation marco
+    - macro allows you to change the rules on how code works 
+    - DSL - domain specific language
+    - transform attribute 
+   - CI / CD
+    - code 
+    - build
+    - intergrate
+    - test
+    - release
+    - deploy
+    - continous intergration
+     - intergration of code changes from multiple contributors into a single project 
+    - continous delivery
+     - automating the prep of code to be released, deployment still manual
+    - continous deployment 
+     -  auto deploys to prod 
+   -  CodeCommit
+    - github for aws 
+    - hippa compliance
+    - encrypted
+   -  Docker
+    -  ECR (elastic container repository) 
+   -  CodeBuild
+    - build service in the could
+    - runs unit tests, produces artifacts are ready to deploy  
+    - use CLI to override buildspec
+    - buildspec
+     - needs to be in roots
+     - build instructions
+     - 0.2 version recommended
+     - phases
+      - install
+      - pre_build
+      - build
+      - post_build
+     -  artifacts
+    -  Code deploy
+     - fully managed deploy serice
+     - ec2, on-prem lambda or ECS
+     - raipd
+     - in place blue/green  
+
+
 Sample question review:
   
 White Paper Review:
