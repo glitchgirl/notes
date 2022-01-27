@@ -707,9 +707,88 @@ VPC
       - code deploy agent
       - you need to install this
       - code deploy service role - based on your deployment strategy
-Youtube video notes (0:14:59):
+      
+Youtube video notes (1:23:56):
 https://www.youtube.com/watch?v=eCopK1RoyFM&t=0s
-
+  Codepipeline
+  - encompasses all components
+  - source, build, deploy
+  - action group
+  - actions does something
+   - custom actions
+   - not restricted by stage
+   - source
+   - test
+   - deploy
+   - invoke 
+  - artifacts
+  - stage transitions
+ CodeStart
+  - wizard for common apps set up
+  - deployment pipeline
+  - access management
+  - dashboard
+ RDS
+  - encryption on for all rest handled by KMS
+  - backups
+   - automated backups
+   - manual snapshots
+   - restoring - need update endpoint 
+  - multi AZ
+   - synchronizes
+   - failover to worker
+   - read replicas - async must have automatic backups enabled for this to work
+  S3
+   - obejct based storage
+   - not file systems not block (sectors/tracks)
+   - unlimited storage
+   - don't have to worry about underlying infrastructure
+   - object
+    - key
+    - value
+    - version ID
+    - metadata
+   - bucket
+    - hold buckets
+    - can have folders
+    - universal must be unique
+   - storage classes
+    - standard (default)
+    - intelligent tiering
+    - standard infrequently accessed (reduced availility)
+    - one zone IA
+    - glacier long term cheap storage
+    - glacier deep archive very cheap
+   - security
+    - private by default
+    - access control lists
+    - bucket policies
+   - encryption
+    - encryption in transit
+    - SSE-AES
+     - uses algorithm 
+    - SSE-KMS
+     - management the keys 
+    - SSE-C   
+     - client key
+    - client side
+     - you encrypt
+    - new objects
+     - read after write consistency
+     - eventual consistency
+    - cross region replication
+     - automatically replicated 
+     - versioning must be turned on
+    - versioning
+     - extra protection
+     - can't disable after turned on
+    - lifecycle management
+     -like move to glacier, delete etc
+    - transfer accelertaion
+     - fast and secure tranfer over long distances
+     - uses cloudfront
+    - presigned url
+     - temporary access to private objects
 
 Sample question review:
   
