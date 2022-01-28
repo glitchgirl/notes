@@ -708,7 +708,7 @@ VPC
       - you need to install this
       - code deploy service role - based on your deployment strategy
       
-Youtube video notes (1:23:56):
+Youtube video notes (2:13:23):
 https://www.youtube.com/watch?v=eCopK1RoyFM&t=0s
   Codepipeline
   - encompasses all components
@@ -739,7 +739,9 @@ https://www.youtube.com/watch?v=eCopK1RoyFM&t=0s
    - failover to worker
    - read replicas - async must have automatic backups enabled for this to work
   S3
+   - simple storage service
    - obejct based storage
+   - can be 0 bytes to 5 terabytes
    - not file systems not block (sectors/tracks)
    - unlimited storage
    - don't have to worry about underlying infrastructure
@@ -789,6 +791,25 @@ https://www.youtube.com/watch?v=eCopK1RoyFM&t=0s
      - uses cloudfront
     - presigned url
      - temporary access to private objects
+    - MFA delete
+  Elastic Cache
+   - caching - temporary storage
+   - in memory data stores
+   - open source compatible
+   - memcaches
+    - caching HTML fragments 
+   - redis
+    - not as fast
+    - good at leader boards / stuff like that 
+   - only accessible in the same VPC
+  AWS Lambda
+   - run code without provisioning or managing servers
+   - only runs when needed
+   - cheap
+   - serverless
+   - scales automatically
+   - anything past 15 mins you probs want to use fargate
+   - cold starts - has a delay 
 
 Sample question review:
   
