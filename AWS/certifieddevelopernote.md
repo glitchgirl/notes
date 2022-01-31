@@ -708,7 +708,7 @@ VPC
       - you need to install this
       - code deploy service role - based on your deployment strategy
       
-Youtube video notes (2:13:23):
+Youtube video notes (2:41:54):
 https://www.youtube.com/watch?v=eCopK1RoyFM&t=0s
   Codepipeline
   - encompasses all components
@@ -810,6 +810,68 @@ https://www.youtube.com/watch?v=eCopK1RoyFM&t=0s
    - scales automatically
    - anything past 15 mins you probs want to use fargate
    - cold starts - has a delay 
+   - Versioning
+    - manage deployments
+    - $LATEST
+    - each version has its own ARN
+     - qualified has an end
+     - unqualifed - no version suffix can't use alias
+    -  Alias = friendly name for resources
+    -  Layers
+     - a way of pulling in additional code and content
+     - instead of putting it in your deployment package
+     - faster deployment, easier to re use
+     - 5 layers per funtion, limit 250mb
+  API gateway
+   - a solution for creating secure APIs in your cloud environment at any scale
+   - create APIs that act as a door to access dta, logic, or backend services
+   - handles all the tasks involved in accepting and processing up to hundreds of thousands of concurrect api
+   - resources
+    - multiple resouces 
+    - urls you define
+    - can have childern 
+   - methods
+    - define on on resouces
+    - these are rest apis
+   -  stages
+    - stagea are version of your api  
+   -  invoke url
+    -  the unique url aws gives you to actually hit the endpoint
+   -  deploy api
+    - everytime you change it, you must re-deploy
+   - configuration
+    - most common is lambda
+   - caching
+    - can be enabled to cache your endpoints responce to calls
+    - improves latency / reduce calls
+   - CORS
+    - cross-origin resource sharing
+    - allows restricted resources on a webpage to be requested from a different domain than the resource 
+    - always enforced by the client
+    - same origin policy
+  Step functions
+   - state machine 
+    - abstract model which decides how one state moves to another based on a series of conditions = flow chart
+   - coordinated multiple aws services into a serverless work flow
+   - standard
+    - most stuff 
+   - express 
+    - streaming data
+    - short duration/high event
+   - steps can be executed in parallel
+   - JSON to manage states
+   - Pass state
+    - passes its input to its output without performing any work   
+    - parameters
+    - result
+    - result path
+   - Task state
+   - represents a single unit of work performed by a state machine
+    - lambda function task
+    - supported aws service (like batch job)
+    - activities - a worker thaqt can be hosted on anywhere (EC2)  
+    
+
 
 Sample question review:
   
