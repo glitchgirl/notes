@@ -19,6 +19,11 @@ Knowledge notes:
    - !Sub = substitutes variables
   - SQS uses a visibility timeout to prevent other consumers from receiving and processing the same message
   - ARN (amazon resource Name)
+  - code commit - like github but its HIPPA compliant
+  - Amazon certification manage - manages ssl/tls
+  - Code development kit - infrastrucutre as code with imperative paradim 
+  - secrets managener - used for automatically rotating database creds
+  - ssm parameter - data mangement 
 
   
 PRE-TEST 1)
@@ -708,7 +713,7 @@ VPC
       - you need to install this
       - code deploy service role - based on your deployment strategy
       
-Youtube video notes (2:41:54):
+Youtube video notes 2:
 https://www.youtube.com/watch?v=eCopK1RoyFM&t=0s
   Codepipeline
   - encompasses all components
@@ -870,14 +875,41 @@ https://www.youtube.com/watch?v=eCopK1RoyFM&t=0s
     - lambda function task
     - supported aws service (like batch job)
     - activities - a worker thaqt can be hosted on anywhere (EC2)  
+    - choice state - add branching logic to state machine
+    - wait state
+    - succeed state
+    - fail state
+    - parallel states - waits for multiple branches to complete before moving on to next state
+    - map states
     
-
-
 Sample question review:
   
 White Paper Review:
- - Architecting for the cloud: aws best practives
- - Practicing continous integration and continuous delivery on AWS acceleration software delivery with devops
+ - AWS Well-Architected framework 
+  - https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html
+  - AWS Well-Architected tool provides a consistent process for you to review and measure your architecture against the WA framework
+  - Pillars of AWS WA
+   - Operational Excellence
+    - perform operations as code
+    - make frequent small reversible changes
+    - refine operations procedures frequently
+    - anticipatre failure
+    - learn from operational failures
+    - Organization
+     - ensure that there are identifed owners for each aplication, workload, platform, and infrastruture component, and that each process and procedure has an identified owner responsible
+     - use aws organizations to help manage operating models
+     - How do you determine what your priorites are
+     - how do you structure your organization to support your business outcomes?
+     - how does your organization culture support your business outcomes?  
+   - Security
+   - Reliability
+   - Performance Efficiency
+   - Cost Optimization
+   - Sustainability 
+ - Practicing continous integration and continuous delivery on AWS
+  - https://d1.awsstatic.com/whitepapers/DevOps/practicing-continuous-integration-continuous-delivery-on-AWS.pdf
  - Blue/Green deployments on AWS
+  - https://d1.awsstatic.com/whitepapers/AWS_Blue_Green_Deployments.pdf
  - Running containerized microservices on AWS 
+  - https://d1.awsstatic.com/whitepapers/DevOps/running-containerized-microservices-on-aws.pdf
  
