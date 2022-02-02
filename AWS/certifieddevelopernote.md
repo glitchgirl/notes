@@ -900,8 +900,38 @@ White Paper Review:
      - use aws organizations to help manage operating models
      - How do you determine what your priorites are
      - how do you structure your organization to support your business outcomes?
-     - how does your organization culture support your business outcomes?  
+     - how does your organization culture support your business outcomes? 
+    -  Prepare
+     - How do you design your workload so that you can understand its state?
+     - how do you reduce defects, ease remediation, and imporve flow into production?
+     - How do you mitigate deployment risks?
+     - how do you know that you are ready to support a workload?
+    - Operate
+     - how do you understand the health of your workload?
+     - how do you undersatnd the health of your operations?
+     - how do you manage workload and operations events?
+    - Evolve
+     - dedicate time and resources for continuous incremental imporvement to evolve the effectiveness and efficiency of your operations?  
    - Security
+    - Desgin Principles
+     - Implement a strong identity foundation
+     - enable traceability 
+     - apply securiity at all layers
+     - automate security best practices
+     - protect data in transit and at rest
+     - keep people away from data
+     - prepare for security events 
+    - Best practices 
+     - Security 
+      - how do you securely operate your workload
+     - Identity and access management
+      - how do you manage identities for people and machines?
+      - how do you manage permissions for peoples machines?  
+     - Detection
+      - how do you detect and investigate security events?
+     - Infrastructure Protection
+      - How do you protect your network resources
+      - how do you protect your compute resources      
    - Reliability
    - Performance Efficiency
    - Cost Optimization
