@@ -931,9 +931,54 @@ White Paper Review:
       - how do you detect and investigate security events?
      - Infrastructure Protection
       - How do you protect your network resources
-      - how do you protect your compute resources      
+      - how do you protect your compute resources    
+     -  Data Protection
+      - how do you classify your data?
+      - how do you protect your data at rest?
+      - how do you proctect your data in transit?
+     - Indicent Response
+      - how do you anticipate respond to, and recover from incidents? 
    - Reliability
+    - Design Principles
+     - Automatically recover from failue
+     - Test recovery procedures
+     - scale horizontally to increase aggregate workload availability 
+     - stop guessing capacity
+     - manage change in automation
+    - Best Practices 
+     - Foundations
+      - How do you manage service quotas and constraints
+      - how do you plan your network topology
+     - Workload Architecture
+      - how do you design your workload service architecture
+      - how do you design interactions in a distributed system to prevent failures?
+      - how do you design interactions in a distributed system to mitigate or withstand failures?
+     - Change management
+      - how do you monitor workload resources?
+      - how do you design your workload to adapt to changes in demand?
+      - how do you implement change 
+     - Failure Management 
+      - how do you back up data
+      - how do you use fault isolation to protect your workload
+      - how do you test reliability
+      - how do you plan for disaster recovery
    - Performance Efficiency
+    -  Design Principles
+     - democratize advanced technologies
+     - go global
+     - use serverless architectures
+     - experiment more ofter
+     - consider mechanical sympathy  
+    -  Best Practices
+     - Selection
+      - how do you select the best performing architecture 
+      - Compute
+      - Storage
+      - Database
+      - Network 
+     - Review 
+     - Monitoring
+     - Tradeoffs  
    - Cost Optimization
    - Sustainability 
  - Practicing continous integration and continuous delivery on AWS
