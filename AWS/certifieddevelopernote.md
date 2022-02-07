@@ -973,16 +973,72 @@ White Paper Review:
      - Selection
       - how do you select the best performing architecture 
       - Compute
+       - instances (EC2)
+       - containers (ECS)
+       - functions (lambda)
+       - how do you select your compute solution
       - Storage
+       - object storage (s3)
+       - block storage (EBS)
+       - file storage (EFS)
+       - how do you select your storage solution?
       - Database
+       - how do you select your database solution?
       - Network 
+       - how do you configure your networking solution?
      - Review 
+      - how do you evolve your workload to take advantage of new releases?
      - Monitoring
+      - how do you monitor your resources to ensure they are performing? 
      - Tradeoffs  
+      - how do you use tradeoffs to imporve performance?
    - Cost Optimization
+    - Design Principles
+     - implement cloud financial management
+     - adopt a consuption model
+     - measure overall efficiency
+     - stop spending money on undifferentiated heavy lifting (data center ops)
+     - analyze and attribute expenditure
+    - Best Practices
+     - Practice cloud financial management
+      - cost explorer, athena, quicksight
+      - how do you implement cloud financial management 
+     - expenditure and usage awareness
+      - how do you govern usage?
+      - how do you monitor usage and cost?
+      - how do you decommission resources?
+      - use tags
+     - cost-effective resources
+      - how do you evaluate cost when you select services?
+      - how do you meet cost targets when you select resource type, size and number?
+      - how do you pricing models to reduce cost? (i.e. on spot etc)
+     - manage demand and supply resources
+     - optimize over time
+      - how do you evaluate new services?
    - Sustainability 
+    - design principles
+     - understand your impact
+     - establish sustainability goals
+     - maximize utilization
+     - anticipate and adopt new more effiecent hardware and software offerings
+     - use managed services
+     - reduce the downstream impact of your cloud workloads 
+    - best practices
+     - region selection
+     - user behavior patterns
+     - software and architecture patterns
+     - data patterns
+      -  use lifecycle polcies
+     - hardware patterns
+      - use managed hardware
+     - development and deployment patterns
+  - The review process
+   - needs to be done in a consistent manner, blamefree
+   - perform RCA (root cause analysis) 
  - Practicing continous integration and continuous delivery on AWS
   - https://d1.awsstatic.com/whitepapers/DevOps/practicing-continuous-integration-continuous-delivery-on-AWS.pdf
+  - The challenge of software delivery 
+  - 
  - Blue/Green deployments on AWS
   - https://d1.awsstatic.com/whitepapers/AWS_Blue_Green_Deployments.pdf
  - Running containerized microservices on AWS 
