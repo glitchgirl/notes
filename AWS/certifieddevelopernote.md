@@ -1038,7 +1038,79 @@ White Paper Review:
  - Practicing continous integration and continuous delivery on AWS
   - https://d1.awsstatic.com/whitepapers/DevOps/practicing-continuous-integration-continuous-delivery-on-AWS.pdf
   - The challenge of software delivery 
-  - 
+  - What is continous intergration and continuous delivery/deployment?
+   - Continuous integration
+    - developers regularly merge their code into a repo after which builds and tests are run. 
+   -  Continuous delivery and deployment
+   -  delivery - code changes are are automatically built, tests, and prepped for prod, generates appropriate artifacts
+   -  doesn't go to prod automatically
+   -  automates release process
+   -  improves productivity
+   -  improves code quality
+   -  deliver code faster
+  -  Implementing continous integration and continuous delivery
+   - don't try to go all out from the start, slowly build up pipeline
+   - no developer holds code in isolation
+   - merge code early and often
+   - unit tests
+   - create a staging environment
+   - replica of the production stack, more functional tasks
+   - creating a production environment IaC
+   - make three teams
+    - application team
+     - developers
+     - owns backlog, stories, and unit tests 
+    - infrastructure team
+     - ops  
+    - tools team   
+    - needs to stay one step ahead of devs and ops
+   - unit tests should make up about 70% of code testing
+   - static code analysis
+   - staging
+    - integration testing 
+    - component testing
+    - system testing
+    - performance testing
+    - compliance testing
+    - UAT
+   -  Building the pipeline
+    - start with MVP CI pipeline
+    - codestar - pipeline, codebuild, codecommit, and deploy under one dashboard
+    - then build the delivery pipeline
+    - adding lambda actions
+    - this all can be done for serverless apps too
+    - each team should have its own branch or repo 
+    - codebuild uses buildspec.yml to set up build process
+  -  Deployment methods
+   -  All at once
+    - can have downtime if failed
+    - fast
+    - no dns changes
+    - re-deploy to rollback
+    - changes all existing instances
+   -  rolling
+   -  sometimes called canary release
+    - single batch out of service
+    - lil longer to deploy
+    - no downtime
+    - no dns change
+    - re-deploy to rollback
+    - changes all existing instances
+   - rolling with additional batch (beanstalk)
+    - if first fails, no issues, otherwise its just like rolling
+   -  immutable
+    - new servers  
+    -  minimal impact
+    -  long deploy time
+    -  no downtime
+    -  no dns change
+    -  impacts new and existing instances
+   -  traffic splitting
+    -  re-routes to new dns
+   -  blue/green
+    -  if fail switch back to old environment
+    -  only impacts new instances
+  -  Database schema changes
  - Blue/Green deployments on AWS
   - https://d1.awsstatic.com/whitepapers/AWS_Blue_Green_Deployments.pdf
  - Running containerized microservices on AWS 
