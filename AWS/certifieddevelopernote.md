@@ -1111,8 +1111,61 @@ White Paper Review:
     -  if fail switch back to old environment
     -  only impacts new instances
   -  Database schema changes
+   -  when upgrading databases you do need to consider state because a database contains much state but little login/structure
+   -  use other tools to manage db versions - liquid base or flyaway
  - Blue/Green deployments on AWS
   - https://d1.awsstatic.com/whitepapers/AWS_Blue_Green_Deployments.pdf
+  - benefits of blue/green
+   - level of isolation 
+   - able to rollback easily
+   - can also save money, because you are using new instances that might be better optimized
+  - environment boundary
+   - what changed and what needs to happen to make those changes go live
+   - application architecture
+   - organization
+   - risk and complexity
+   - people
+   - process
+   - cost
+  -  Services for blue/green deployments
+   - route 53
+   - elastic load balancing
+   - auto scaling - can push things into a standby state instead of termination for easier rollback
+   - elastic beanstalk
+   - aws opswork - based on chef 
+   - cloudformation
+   - cloudwatch - this one is the montioring, formation makes stuff
+   - codedeploy 
+   - elastic container service
+    - canary
+    - linear
+    - all at once
+   - lambda - use hooks for deployment
+  - Implementation techniques
+   - update dns routing via route 53 - classic blue/green
+   -  swap the auto scaling group behind the elastic load balancer
+    -  elb can also montior health, then the autoscaling group can replace it
+   - update auto scaling group launch configurations
+    - you just relauch with new config
+    - creates new instances, then slowly scales in and deletes the old ones
+   - Swap the environment of an elastic beanstalk application
+    - upload an application bundle
+    - does in place, so might have down time by default
+    - but you can just make a new one in a different env, then just swap the urls
+   - Clone a stack in aws opswork and update dns
+  - Best practices for managing data synchronization and schema changes
+   - both envs need up-to-date data
+   - can share the same data stores, unstructred data is typically easier to manage
+   - decoupling schema changes from code changes
+    - database changes must be backwards compatible
+    - its more dangerous to delete stuff than to add stuff, and test throughly
+   -  When blue/green deployments are not recommended
+    - schema can't be decoupled
+    - data can't be shared
+    - is it deployment aware?
+    - does the underlaying software not allow blue/green
+     - i.e. vendor software having mutable infrastructure
+     -  
  - Running containerized microservices on AWS 
   - https://d1.awsstatic.com/whitepapers/DevOps/running-containerized-microservices-on-aws.pdf
  
