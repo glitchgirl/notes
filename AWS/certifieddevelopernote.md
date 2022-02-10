@@ -1168,4 +1168,65 @@ White Paper Review:
      -  
  - Running containerized microservices on AWS 
   - https://d1.awsstatic.com/whitepapers/DevOps/running-containerized-microservices-on-aws.pdf
+  - 12 factor app
+   - codebase
+    - each service has its own codebase
+   - dependencies
+    - self contained 
+   - config
+    - devs can help set up/improve this process because they are involved 
+   - backing services
+   - build, release, run
+    - each service has its own deployment pipeline 
+    - devs have access to whole pipeline
+   - processes
+    - each service does one thing and one thing only
+   - port binding
+   - concurrency
+    - scale in and out 
+   - disposability
+    - easily started, easily shut down 
+   - dev/prod parity
+    - products can be built iteratively, and tested quickly
+   - logs
+   - admin processes
+    - each service has its own admin tasks 
+  -  Componentization via services
+   -  what are called pods in K8 are tasks in ECS
+  -  Organized around business capabilities
+   -  what are the services boundaries
+   -  conway's law: organizations which design systems are constrained to produce designs which are copies of the communication strucutres of these organizations
+   -  Design patterns:
+    - Aggregator pattern
+     - a service that invokes other services to get the output
+    - API gateway design pattern
+     - one gateway that gets all data/sends all requests 
+    - Chain of responsibility pattern
+     - one output that comes from a chain of requests
+    - asynchronous messaging design pattern
+     - all services can async talk to each other
+    - database or shared data pattern
+     - each service has a database, but there is also a shared database
+    - event sourcing design pattern
+     - based on state changes 
+    - command query responsibility segregator (CQRS) design pattern
+     - break apart CUD and R
+    - circuit break pattern 
+     - can redirect requests if a service fails
+    - decomposition design pattern   
+     - decompose apps based on capability
+   - Products not projects
+    - instead of having each piece of software be handed through different teams, each feature is a end-user product
+    - increases software stability 
+    - automated provisioning
+    - self-service
+    - CI
+    - CD
+   - Smart endpoints and dumb pipes
+    - request/response
+     - one service invokes another service by making a request
+    - publish/subscribe 
+     - one service waits for an event
+    - use a message broker instead of trying to reinvent the wheel
+    - this also prevents coupling in buses/messages
  
