@@ -1171,21 +1171,31 @@ White Paper Review:
   - 12 factor app
    - codebase
     - each service has its own codebase
+    - infrastructure can be described as code
    - dependencies
     - self contained 
+    - dependency isolation is critical
    - config
     - devs can help set up/improve this process because they are involved 
+    - each environment should hold and share it's config
    - backing services
+    - allows services to be hooked to each other
+    - every service is treated as third party and must obey external contract for communication
    - build, release, run
     - each service has its own deployment pipeline 
     - devs have access to whole pipeline
+    - allow each time to use their own tools
+    - one environment for each purpose
    - processes
     - each service does one thing and one thing only
    - port binding
+    - services bind to a port for incoming requests
    - concurrency
     - scale in and out 
+    - having a good communication pipeline allows concurrency
    - disposability
     - easily started, easily shut down 
+    - graceful shutodwn
    - dev/prod parity
     - products can be built iteratively, and tested quickly
    - logs
@@ -1229,4 +1239,26 @@ White Paper Review:
      - one service waits for an event
     - use a message broker instead of trying to reinvent the wheel
     - this also prevents coupling in buses/messages
+    - sidecar - another services sits with your service to help it
+   - Decentralized Governance
+    - make your services work like traffic lights
+    - gitOps
+     - system described declaratively
+     - system state version controlled in git
+     - changes applied automatically
+     - agents to correct and alert
+   -  Decentralized Data Management 
+    - easier to manage upgrades/updates  
+    - allows for graceful states of failure  
+    - Design patterns:
+     - controller - directs request to appropriate data store
+     - proxy - provides a surrogate for another object
+     - visitor - represents an operation to be performed 
+     - interpreter - maps a service
+     - observer - one-to-many dependency between objects
+     - decorator - alternatice to sub-classing for extending functionality
+     - memento - captures and externalizes an object's state
+   - Infrastructure automation
+   - Design for Failure 
+    -    
  
