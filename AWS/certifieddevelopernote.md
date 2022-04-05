@@ -44,7 +44,15 @@ Knowledge areas
   - Development - 42 %
   - Monitoring/Troubleshooting - 56%
 
-  
+PRE-TEST 3) 
+Score: 55
+ Knowledge areas
+  - Deployment - 58%
+  - Security - 71%
+  - Refactoring - 25 %
+  - Development - 50 %
+  - Monitoring/Troubleshooting - 56%
+  - 
   Test review notes:
  - Reducing latency with DynamoDB / OLTP should be done with global tables (if global users), and use eventually consistent reads instead of strongly consistent reads
  - DAX is for read heavy, not write heavy. 
