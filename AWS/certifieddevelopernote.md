@@ -1269,4 +1269,35 @@ White Paper Review:
    - Infrastructure automation
    - Design for Failure 
     -    
- 
+ Ultimate AWS Certified Developer Associate class review -
+ - IAM
+  - user mapped to a physical user, has a password
+  - groups contains only users
+  - policies JSON doc that outlines perms
+  - Roles - for instances or services 
+ - EBS
+  - elastic block store volume 
+  - persists data after termination
+  - kinda like a network usb stick
+  - If we want to move it across AZ must snapshot it
+ - ELB
+  - Health checks
+  - CLB
+   - dep
+  - ALB
+   - HTTP/ HTTPS 
+   - Layer 7
+  - NLB
+   - TCP/UDP 
+   - Less Latency
+  - GWLB      
+   - used for 3rd party VPN appliances
+   - firewalls, payload manipulation
+   - operates on Layer 3
+   - uses GENEVE 6081
+  - RDS
+  - Aurora
+  - ElasticCache
+   - managed Redis or memcaches
+   - helps make things stateless
+   - requires code changes  
