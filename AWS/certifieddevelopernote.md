@@ -1301,3 +1301,63 @@ White Paper Review:
    - managed Redis or memcaches
    - helps make things stateless
    - requires code changes  
+  - VPC 
+   - virtual private cloud
+   - regional resouce 
+   -  Subnets
+    - allows you to partition your netowrk
+    - public - accessible from the internet
+    - private  - not accessible
+    - to define access use route tables
+   - Internet Gateway 
+    -  helps our VPC instance connect with the internet
+   - NAT gateway 
+    - mangaged by aws
+   - NAT instance
+    - allows you have a private subnet and give it access to the internet, but the internet can't get access to the private subnet
+   - NACL
+    - network ACL - firewall
+    - allow or deny
+    - at SUBNET level
+    - rules only inclued IP addresses 
+   - Security Groups      
+    - firewall to and from an ENI (elastic network interface) or EC2  
+    - can only have ALLOW
+    - rules included IP addresses and other security groups 
+   - Flow logs
+    - capatures information about IP traffic (VPC, Subnet, ENI)
+    - can be stored in S3 or cloudwatch
+   -   VPC peering
+    - connects two VPCs privately 
+    - no overlap CIDR
+    - connections are not transitive   
+   -  Endpoints
+    - Allows you to connect to AWS using a private network instead of public
+    - better security and latency
+    - for things like S3 and Dynamo DB use VPC endpoint gateway
+    - VPC endpoint interface for everything else   
+   -  VPN
+    - site to site VPN 
+    - goes over public internet
+    - auto encrypted    
+   -  DX
+    - direct connect
+    - physical connection
+    - takes a lot of time to set up   
+   - VPN and DX can't access VPC endpoints
+   - Typical 3 tier solution
+    - public subnet (ELB) (route 53)
+    - private subnet (ASG) (EC2)
+    - data subnet (RDS) (elastic cache)
+   - ECS
+    - Cluster
+     - logical grouping of EC2 instances
+     - the EC2 instances run the ECS agent (docker container)
+     - ECS agents registers the instance to the ECS cluster
+     - EC2 instances run a special AMI made for ECS 
+    - Services
+    - Tasks
+    - Tasks Definition 
+    - ECR 
+    - Fargate    
+   
