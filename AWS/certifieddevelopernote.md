@@ -1358,6 +1358,25 @@ White Paper Review:
     - Services
     - Tasks
     - Tasks Definition 
+     - JSON form to tell ECS how to run a docker container
+     - image name
+     - port binding
+     - memory and cpu
+     - variables
+     - networking
+     - IAM
+     - logging 
     - ECR 
+     - elastic container registry (like docker repos) 
     - Fargate    
-   
+   - Elastic Beanstalk
+    - server teir
+    - worker tier
+     - no client access (sqs) 
+    -   Single instance - good for dev
+    -   High availability with LB - good for prod
+    -   All at once - fastest, but has downtime
+    -   Rolling (bucket) - update in batches
+    -   Rolling with additional batch - same but extra
+    -   immutable spins up new ones, waits until things are stable, switches to new version
+    -   
