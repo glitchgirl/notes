@@ -1379,4 +1379,8 @@ White Paper Review:
     -   Rolling (bucket) - update in batches
     -   Rolling with additional batch - same but extra
     -   immutable spins up new ones, waits until things are stable, switches to new version
-    -   
+   - CICD
+   - CodeCommit
+   - CodePipeline
+   - CodeBuild
+   - CodeDeploy 
