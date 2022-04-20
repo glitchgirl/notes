@@ -1384,3 +1384,4 @@ White Paper Review:
    - CodePipeline
    - CodeBuild
    - CodeDeploy 
+   - CloudFormation
