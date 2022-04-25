@@ -1385,3 +1385,18 @@ White Paper Review:
    - CodeBuild
    - CodeDeploy 
    - CloudFormation
+    - Resources
+    - AWS::PRODUCTNAME::DATA
+    - Parameters
+    - Mappings
+    - Outputs
+    - Conditions
+    - Intrinsic Functions
+    - ref
+    - getAtt
+    - findInmap
+    - Rollback
+    - Change sets
+    - Nested Stacks
+    - Stack Set
+    - Drift 
