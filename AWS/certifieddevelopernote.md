@@ -1400,3 +1400,4 @@ White Paper Review:
     - Nested Stacks
     - Stack Set
     - Drift 
+ - Montioring, troubleshooting, audits
