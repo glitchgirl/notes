@@ -1401,3 +1401,5 @@ White Paper Review:
     - Stack Set
     - Drift 
  - Montioring, troubleshooting, audits
+  - cloudwatch custom metrics
+  - 
