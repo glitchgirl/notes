@@ -1402,4 +1402,10 @@ White Paper Review:
     - Drift 
  - Montioring, troubleshooting, audits
   - cloudwatch custom metrics
-  - 
+  - cloudwatch alarms
+  - cloudwatch events
+  - Event bridge
+  - default event bus (same as cloudwatch events)
+  - partner event bus
+  - custom event bus
+  - Xray
