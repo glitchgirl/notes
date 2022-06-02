@@ -1412,3 +1412,8 @@ White Paper Review:
    - instruments/concepts
    - beanstalk
   - Cloud trail 
+  - Messaging
+  - SQS
+   -  
+  - SNS
+  - Kinesis
