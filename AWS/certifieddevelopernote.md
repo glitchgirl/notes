@@ -1414,6 +1414,6 @@ White Paper Review:
   - Cloud trail 
   - Messaging
   - SQS
-   -  
+   -  message visiblity timeout
   - SNS
   - Kinesis
