@@ -37,7 +37,6 @@
 
 ## ML-AL-Networks
 
-- .DS_Store
 - Kafka
 - Math
 - Math
@@ -55,6 +54,10 @@
 
 - WorkTips
 
+## Web Components
+
+- general
+
 ## Browser
 
 - Engine
@@ -64,13 +67,15 @@
 ## Cms
 
 - Gennotes
+- sanity.io
 
-## Css
+## CSS
 
 - artchitecture
 - gennotes
 - selectors
 - transform
+- Tailwind CSS
 
 ## Elastic Search
 
@@ -100,7 +105,6 @@
 
 ## Math
 
-- .DS_Store
 - Linear algebra
 - Logic
 - Matrix
@@ -112,10 +116,18 @@
 - Commands
 - Gennotes
 
+## GROQ
+
+- General Notes
+
 ## Node
 
 - General
 - Node
+
+## Next
+
+- General
 
 ## Npm
 
@@ -159,7 +171,3 @@
 ## Websocket
 
 - websocket
-
-## Readme
-
-## General
