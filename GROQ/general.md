@@ -11,7 +11,7 @@
 - [] filters
   - things like && || > etc
 - {} return fields in an array
-- functions include thing Order
+- functions include thing Order, count
 - data isn't ordered by default
 - Slicing
   - [0] or [0...100], returns stuff in that range
@@ -30,4 +30,11 @@
 - thing -> {field} to return a field from the ref object
 - "fancy Name": thing -> name makes new field in the return object
 - If the return type is an array, object[]->, remember to add [] otherwise you get an error
--
+- Joins
+
+```
+*[]{*[]}
+```
+
+- Projections can be done inside projections
+- ... used to show standard fields in addition to custom fields
