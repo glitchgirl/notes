@@ -1,1 +1,20 @@
+Users and Groups
+- only use root to create accounts
+- users are the accounts/ people
+- Groups can only contain users
+- Users can belong to 0, 1, or more groups
+
+Permissions
+- policies 
+  - JSON
+  - inline polices are for users not in a group
+  - contains statements
+    - SID
+    - effect
+    - principal
+    - actions
+    - resources
+    - conditions
+- Least Privilage Priinciple
+
 
