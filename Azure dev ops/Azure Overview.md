@@ -8,6 +8,19 @@ Container based architectures - Azure provides a variety of container based serv
 
 Modern serverless architectures - Azure Functions simplify building solutions to handle event-driven workflows, whether responding to HTTP requests, handling file uploads in Blob storage, or processing events in a queue. You write only the code necessary to handle your event without worrying about servers or framework code. Further, you can take advantage of over 250 connectors to other Azure and third-party services to tackle your toughest integration problems.
 
+
+# App Service overview
+
+Azure App Service is an HTTP-based service for hosting web applications, REST APIs, and mobile back ends. You can develop in your favorite language, be it .NET, .NET Core, Java, Node.js, PHP, and Python. Applications run and scale with ease on both Windows and Linux-based environments.
+
+App Service adds the power of Microsoft Azure to your application, such as security, load balancing, autoscaling, and automated management. Additionally, you can take advantage of its DevOps capabilities, such as continuous deployment from Azure DevOps, GitHub, Docker Hub, and other sources, package management, staging environments, custom domain, and TLS/SSL certificates.
+
+
+
 Useful links:
 
 [dev notes](https://learn.microsoft.com/en-us/azure/developer/intro/azure-developer-overview)
+
+[Create an app service in node](https://learn.microsoft.com/en-us/azure/app-service/getting-started?pivots=stack-nodejs) 
+
+
