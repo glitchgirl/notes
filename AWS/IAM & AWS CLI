@@ -1,3 +1,7 @@
+IAM:
+Identity and Access Management, this is a global service.
+- you shouldn't use your root account. Create a user to actually do services.
+
 Users and Groups
 - only use root to create accounts
 - users are the accounts/ people
@@ -9,12 +13,12 @@ Permissions
   - JSON
   - inline polices are for users not in a group
   - contains statements
-    - SID
-    - effect
-    - principal
-    - actions
-    - resources
-    - conditions
-- Least Privilage Priinciple
+    - SID (statement id)
+    - effect (allow, deny)
+    - principal (who)
+    - actions (what)
+    - resources (which resource)
+    - conditions (when)
+- Least Privilage Principle
 
 
