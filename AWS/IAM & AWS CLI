@@ -21,4 +21,15 @@ Permissions
     - conditions (when)
 - Least Privilage Principle
 
+MFA
+- Virtual device
+- Universal 2nd Factor Security Key
+- Handware Key Fob
+- GovCloud key 
 
+CLI
+
+SDK
+
+Question:
+ How does AWS store old passwords to know if a password has been used? 
