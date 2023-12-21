@@ -31,5 +31,11 @@ CLI
 
 SDK
 
+IAM Roles
+
+SEcurity Tools
+- Credentials Report
+- Access Advisior (shows user what they have accessed)
+
 Question:
  How does AWS store old passwords to know if a password has been used? 
