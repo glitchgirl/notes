@@ -1,4 +1,4 @@
-#EC2 
+# EC2 
 
 ## Types
 - General purpose
@@ -6,3 +6,5 @@
 - Memory optimized
 - Accelrated computing
 - Storage optimized
+
+Set up billing before you start making things
