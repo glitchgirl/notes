@@ -22,3 +22,13 @@ Set up billing before you start making things
 - Snapshot archive - takes time to restore
 - Can use snapshots to copy them to new AZ
 - Recycle bin 
+
+## EBS Volume Types
+- gp2/3 - general purpose
+- io1/2 - highest performance for low latency high through put
+- stl - low cost frequently accessed throughput intensive workloads - can't be boot volumes
+- scl - lowest cost for less frequently accessed workloads - can't be boot volumes
+- provisioned IOPS
+- can increase PIOPS independently from storage size
+- Nitro for more IOPS
+- 
