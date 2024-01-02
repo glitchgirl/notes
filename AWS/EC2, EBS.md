@@ -25,10 +25,24 @@ Set up billing before you start making things
 
 ## EBS Volume Types
 - gp2/3 - general purpose
-- io1/2 - highest performance for low latency high through put
+- io1/2 - highest performance for low latency high through put, can be multi attached
 - stl - low cost frequently accessed throughput intensive workloads - can't be boot volumes
 - scl - lowest cost for less frequently accessed workloads - can't be boot volumes
 - provisioned IOPS
 - can increase PIOPS independently from storage size
 - Nitro for more IOPS
+
+# EFS
+- Elastic File System
+- Managed NFS that can be mounted on many EC2
+- Can be multi AZ
+- This can be good for things like CMS
+- Can only be ran on unix systems
+- File system is pay per use
+- Scale
+- Performance mode: general versus max i/o
+- Throughput mode: bursting versus provisioned versus elastic
+- Storage Tiers
+- Use a lifecycle policy to move things to lower cost storage
+- Standard is better for prod (multi AZ), but backed up in one zone is fine for dev
 - 
