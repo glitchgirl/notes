@@ -30,3 +30,15 @@ Storage Auto Scaling
   - sync
   - not for replicas
 Can use read replicas for recovery
+
+Aurora
+- made for cloud
+- 15 read replicias
+- self healing
+- reader endpoints
+- writer endpoints
+
+- RDS proxies
+- Elasticache
+      - not just something you can add on in the end
+  
