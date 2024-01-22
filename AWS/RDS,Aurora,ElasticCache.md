@@ -41,4 +41,6 @@ Aurora
 - RDS proxies
 - Elasticache
       - not just something you can add on in the end
-  
+      - Cache evictions
+      - Write through has longer writes but reads are quick
+  - You can not create encrypted Read Replicas from an unencrypted RDS DB instance.
