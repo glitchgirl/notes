@@ -128,4 +128,27 @@
     - when doing your categories, you should strive for simple and accurate, not as many as possible
     - if needed you can override the default mappings, one case might be if a listing service doesn't have the category you'd like to use.
     - don't go overboard with these changes
-    -  
+
+
+# Module 5:
+## Data modeling in Yext
+- Principles of data modeling
+- difference between entity types and fields
+    - entities are things
+    - fields describes that thing
+    - fields have permissions, but sub-fields don't
+    - anything listed on google maps needs to be a built in entity with an address
+    - remember to turn on ECLs if you want it to sync with maps
+- when & how to link entities together
+    - This is done via the entity relationship custom field type
+    - one way relationships (a product is available at a location)
+        - the source entity
+        - the destination entity
+        - the relationship context (the field)
+    - two way (shared field) relationships (person A and person B are siblings)
+        - the related entities
+        - the relationship context (shared field)
+    - two way (distinct fields) relationships (a person works a company, a company staffs a person)
+        - the related entities
+        - two relationship context (two distinct fields)
+- common data model example
