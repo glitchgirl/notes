@@ -94,6 +94,38 @@
         - validation
     - once defined, a field maintains the same properties like name and validation no matter where it appears
 - difference between built in and custom fields
+    - fields can be pre-built or custom like types
+    - built in
+        - handles things like default behavior
+        - this is preferred
+        - can be delivered to listings
+        - can't update things like type, API name, or validation
+    - custom
+        - can't be delivered to listings
+        - can update things like type, API name, or validation
 - how to create custom fields
+    - you can create a custom field from the fields page or from the entity type page. The key difference between these two methods are that if you create a field from the custom fields screens you can't set properties that are specific to a field on a given entity type. If you create a field in the custom fields the field will automatically be set to "other fields". This is preferred for adding multiple types, but if you just want to add a field to one type you should use the entity types page. 
+    - standard field types (see list for all options)
+    - you cannot change a field type after creation
+    - other config options:
+        - field name (make this human readable/understandable)
+        - id
+        - field settings (type and validation, and you can make things into lists)
+        - alternate language behavior
+        - field availability (this is how you add the fields to different types)
+        - custom field permission group
+        - tooltip description
 - how to create custom field types
+    - custom field types let you define a new complex field type using the standard field types as sub-fields
+    - if you want to create a complex field inside a field (i.e. a CTA in a promotion) you should use the `struct` field which is a nested inline object. Don't go overboard with this. 
 - how field sections and custom field groups work
+- What are categories
+    - category is a field on events and location like built in entity types. 
+    - this is important for things like: listings, knowledge tags schema, pages schema, and taxonomy
+    - yext maintains a complex taxonomy system for categories that map between yext and endpoints (i.e. google or schema.org)
+    - This provides information that maps to third party things in the way the expect (i.e. google might have a different layout than apple etc)
+    - Knowledge tags work similarly 
+    - when doing your categories, you should strive for simple and accurate, not as many as possible
+    - if needed you can override the default mappings, one case might be if a listing service doesn't have the category you'd like to use.
+    - don't go overboard with these changes
+    -  
