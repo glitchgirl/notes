@@ -197,3 +197,59 @@
             - this can be nice for some things like maybe services offered to keep it up to date (i.e. delete all old offers)
         - deletion the connector will delete everything supplied in the run. this is normally used for pushing back to a different source. for example, you want to delete sales from like shopify or something. 
 - how to manage connector frequency and run modes
+- when to use the various data connectors
+    - "best" is hard to define, but in general using an API will be the most "correct" but take the most work. Pre-built connectors will be easier but might not be 100% what you need. 
+    - less desirable would be file uploads or crawlers. these can be hard to use, and still not be "correct" 
+    - be sure to pay attention to the entity id and only update it when you mean too. 
+- important things to keep in mind when leveraging data connectors
+
+# Module 8
+## Yext Site Crawler & crawler connector
+- how to create a crawler
+    - you have to create a crawler before you can create a crawler connector
+    - for best results you should white list both the user agent and IP addresses 
+    - when setting up your crawler, decide if it should crawl all file (supported) types or select file types
+    - you can also tell it what pages to avoid with a blacklist 
+    - you can also add a rate limiter so you don't crash your website LOL 
+    - crawler can only see public sites
+    - crawler (as of right now) can only see desktop sites
+- an overview of crawler settings
+    - from the edit screen you can:
+        - delete
+        - disable 
+- additional details on the crawler functionality
+- how to convert crawled pages into entities
+- using ```*``` you can get the most of the pages you need
+- page types
+    - detail page
+        - this is a one-to-one relationship between the page and the entity (i.e. a blog post, individual product page)
+    - list page
+        - this is a one-to-many relationship between the page and the entities (i.e. FAQ pages, catalog pages)
+        - need to provide something that points to the outer container for each entity on the page (i.e. the CSS "container" selector or xpath)
+    - specify selectors
+        - pre-built
+            - page ID - unique for each unique URL 
+            - Item Id - unique id for each item on a page (for list pages) it looks like ```[Page ID]-[Item Index]```
+            - page URL
+            - page title (defined by HTML)
+            - cleaned body content
+        - manual
+            - css
+                - class names
+                - css selectors
+                    - https://try.jsoup.org/
+            - xpath
+                - XML path
+    - transformers
+        - map to field
+- an understanding of all connector settings for the crawler 
+    - connector schedule
+        - if you want the crawler to run again right after finishing a crawl set schedule to "auto", otherwise if you want to control when it runs set schedule to "manual"
+- when to use a crawler
+    - pulling in unstructured long-form content (blog posts)
+    - highly structured pages
+- when not to use a crawler
+    - when content is changing frequently
+    - pages not as structured as the entity types you are trying to map it too
+    - one time imports can be good to set up the flow
+- entity IDs! remember to not update them unless you REALLY mean it 
