@@ -132,6 +132,8 @@
 
 # Module 5:
 ## Data modeling in Yext
+
+-- need to finish this section, assessment was busted--
 - Principles of data modeling
 - difference between entity types and fields
     - entities are things
@@ -151,4 +153,10 @@
     - two way (distinct fields) relationships (a person works a company, a company staffs a person)
         - the related entities
         - two relationship context (two distinct fields)
-- common data model example
+    - the relationship is editable, and you can you use validation on types(i.e. this relationship only exists on location types) and item counts
+    - search only uses name right now
+
+
+# Module 7:
+## Data connectors
+- 
