@@ -159,4 +159,41 @@
 
 # Module 7:
 ## Data connectors
-- 
+- How the data connectors framework works
+    - A connector is anything that takes data from a source and transforms it into entities in yext content
+    - The framework is an ETL
+        - Extract 
+        - Transform (from whatever to something yext can use)
+            - this includes things like formatting dates, or removing special chars. Some data sources are already "correct" and don't need to be transformed
+        - Load (into your account)
+            - after the connector runs, it will show you any errors it had
+- Use cases for leveraging data connectors
+- an overview of the available connector sources
+    - generic sources - data sources that do not involve third party apps
+        - most of these have a pre-built connector, but it isn't customizable
+    - native sources - data sources that connect to third party apps
+    - fill upload
+    - FTP / SFTP (wowo)
+    - crawler
+    - API (push and pull)
+    - functions (typescript)
+- how to configure source settings to pull data from the correct endpoint
+- how to specify selectors to pull in the relevant data components 
+    - default selectors will pull in all identified selectors
+- what transformers are
+    - things like fix capitalization, merge columns, etc
+- the type of transforms that are available with connectors
+- how to map fields pulled in from your connector to fields in yext
+    - when you are doing the mapping process, you can still map things that have errors, you can fix the error-ed ones after process. this might be good if most of your data is correct, but you have some that are wrong (maybe a field added later or something)
+- how to run your connector
+    - click run now
+- how to view and adjust your existing connectors
+    - you can duplicate connectors if you are going to need a similar one (i.e. multiple APIs)
+- what connector run modes are
+    - you can set frequency from some pre-done times or set a custom time
+    - determines if the entities should be deleted in the run or not 
+        - default run mode doesn't delete anything, it'll just add new ones and update existing ones. this is less risky, but you might have data that is stale
+        - Comprehensive mode will delete things that aren't in the current pulled data set
+            - this can be nice for some things like maybe services offered to keep it up to date (i.e. delete all old offers)
+        - deletion the connector will delete everything supplied in the run. this is normally used for pushing back to a different source. for example, you want to delete sales from like shopify or something. 
+- how to manage connector frequency and run modes
