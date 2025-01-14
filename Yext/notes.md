@@ -272,7 +272,32 @@
     - the embedded icon is a little plus sign in the corner of other fields. kinda looks what you would expect to expand the field box
     - you can also use this in APIs
 - how embedded fields work 
+    - creating unique content at scale
+    - helping content stay fresh and accurate
+    - URL and URL tracking management
+        - you can add tracking to URLs that are dynamic
+    - website field components
+        - the url
+        - the display url
+        - an option "use my reg web link one" or "use the display URL only"
 - embedded field use cases
 - how embedded fields can help you
 - seo value of differentiated content
 - common use cases
+
+# Module 14
+## Save filters
+- what is a saved filter and how it used across the platform
+- what are saved filters
+    - just a combination of different searches to help you get the data you actually want
+- how advanced filters work
+    - has things like AND / OR / CONTAINS / DOES NOT CONTAIN / EQUAL TO / STARTS WITH 
+    - you can also looks for things "fields without data"
+- how to save an advanced filter
+    - there is a tiny greyed out save icon in a different location from all the other save buttons, you hit that to save it
+    - you can also pin things
+- how to find a saved filter ID
+- how to create a saved filter
+- different filter criteria available for saved filters
+- why saved files are important
+- use cases
