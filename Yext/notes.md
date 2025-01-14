@@ -253,3 +253,26 @@
     - pages not as structured as the entity types you are trying to map it too
     - one time imports can be good to set up the flow
 - entity IDs! remember to not update them unless you REALLY mean it 
+
+# Module 10
+## Embedded Fields
+- how to use embedded fields to create unique content at scale
+- what are embedded fields
+    - embedded fields allow you to dynamically insert fields within other text fields from a single profile. they use the example of madlibs. 
+    - they look like: ```vist our location in [[address.city]]```
+- how to add embedded fields
+    - only text fields and subfields can have embedded fields
+    - types that can be embedded:
+        - strings
+        - options
+        - text lists
+        - addresses
+        - entity ids
+        - other fields might come later
+    - the embedded icon is a little plus sign in the corner of other fields. kinda looks what you would expect to expand the field box
+    - you can also use this in APIs
+- how embedded fields work 
+- embedded field use cases
+- how embedded fields can help you
+- seo value of differentiated content
+- common use cases
