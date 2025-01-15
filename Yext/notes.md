@@ -332,4 +332,16 @@
     - streams generated page templates creates pages for entities in the Yext platform
     - both the Content :tm: :tm:
 - update a streams-generated page template and preview those changes
+    - add the content
+    - update the stream
+    - update the template
+    - preview
 - update a static page 
+    - can be updated like any web page 
+    - external API call happens at build time not run time
+- Customize components
+    - it's best practice to create custom components defined in the components folder.
+    - it's be practice to create custom components for any content on your site that will be repeated
+    - all custom files or directories MUST live under the src directory for the templates to be able to see them
+    - anything that ISN'T a template doesn't go inside the template folder
+    
