@@ -1,9 +1,9 @@
 # Module 1:
-## The importance of Knowledge Graphs and Yext Content
+## The importance of Knowledge Graphs and Yext Content :tm:
 - What is a knowledge graph
     - A knowledge graph is a "brain like" graph. Also something like a map graph
 
-    - yext calls this a "yext content"
+    - yext calls this a "Yext Content :tm:"
 
     - An entity is a real world object within your knowledge graph (job, event, person, product, etc)
 
@@ -23,7 +23,7 @@
 
 
 # Module 2:
-## Navigating Yext Content
+## Navigating Yext Content :tm:
 - how to navigate around content
 - Key screens
     - entities
@@ -40,7 +40,7 @@
 # Module 3:
 ## Introduction to Entity Types
 - What is an entity
-    - An entity is the primary object stored in Yext content (like a row in a database). 
+    - An entity is the primary object stored in Yext Content :tm: (like a row in a database). 
     - They have a type (location, person, custom), and are comprised of fields (name, address, etc)
     - Entities are comprised of two parts:
         - metadata (type, ID, language, and country)
@@ -158,7 +158,7 @@
 # Module 7:
 ## Data connectors
 - How the data connectors framework works
-    - A connector is anything that takes data from a source and transforms it into entities in yext content
+    - A connector is anything that takes data from a source and transforms it into entities in Yext Content :tm:
     - The framework is an ETL
         - Extract 
         - Transform (from whatever to something yext can use)
@@ -308,5 +308,28 @@
 # Module 1
 ## Build your site
 - What pages is
-    - Pages is a powerful platform for developing performant and SEO websites that leverage yext content
+    - Pages is a powerful platform for developing performant and SEO websites that leverage Yext Content :tm:
 - how the pieces of the development process fit together
+- these set up steps are pretty clear BUT
+    - make sure you keep the same yext account ID (write it down somewhere)
+    - make sure you follow the directions closely
+
+# Module 2
+## Customize your site
+- templates
+    - entity templates :ocean:
+        - stream templates allow you to generate pages based on entities in your content that have the same styling and structure 
+        - each "stream" is powered by a stream (content in JSON format)
+        - each has config export. This is where you specify the entity and fields you require in your template. In the example, the location template is used. You can also apply filters here. 
+        - these kinds of templates are useful for things that similarly structured but you need a lot of (product pages)
+    - static page templates :no_entry_sign:
+        - one off pages not powered by streams
+        - config not necessary but allows you to name it
+        - can still use data from Global Data (like headers and footers)
+    - transformProps function can be used to make external API calls. this could be for getting content not in your Yext Content :tm: or to modify other props in the default export
+- customize templates
+- add new content
+    - streams generated page templates creates pages for entities in the Yext platform
+    - both the Content :tm: :tm:
+- update a streams-generated page template and preview those changes
+- update a static page 
