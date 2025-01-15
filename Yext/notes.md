@@ -132,8 +132,6 @@
 
 # Module 5:
 ## Data modeling in Yext
-
--- need to finish this section, assessment was busted--
 - Principles of data modeling
 - difference between entity types and fields
     - entities are things
@@ -301,3 +299,14 @@
 - different filter criteria available for saved filters
 - why saved files are important
 - use cases
+
+
+
+|     |   PAGES   |         |
+|-------------- |----------------|------------------ |
+
+# Module 1
+## Build your site
+- What pages is
+    - Pages is a powerful platform for developing performant and SEO websites that leverage yext content
+- how the pieces of the development process fit together
