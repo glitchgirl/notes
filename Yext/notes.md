@@ -344,4 +344,32 @@
     - it's be practice to create custom components for any content on your site that will be repeated
     - all custom files or directories MUST live under the src directory for the templates to be able to see them
     - anything that ISN'T a template doesn't go inside the template folder
+ 
+  ## Global Data
+  - Learn about common use cases for using global data
+  - Set up your content to easily configure global data
+  - Set up a site stream to access global data in your site
+      - edit it at the config.yaml 
+      - fields
+      - entity ids
+      - locales (default is en)
+# Module 3
+## Deploy pages
+- learn the three phases of deployment process
+    - the initial build
+        - generating all the static assets
+        - this starts when code is pushed to github
+        - config.yaml 
+    - page generation
+        -  generates the HTML web pages that make up the site
+        -  uses streams
+        -  afterwards, the CDN will serve is
+    - ongoing data updates
+        - the streams that were set up in step two are still active and you can use them to update pages or entities (might affect more than one page)
+        - multi page updates are parallelized 
+- learn how the process is structured for faster deployment and better performance
+- Deploy changes to github and your yext sites
+    - learn how to manage deploy preview, staging, and production lnks
+    - navigate the details of individual deploys
+    - on the top of the deploys screen there will be a production and staging link
     
