@@ -372,4 +372,34 @@
     - learn how to manage deploy preview, staging, and production lnks
     - navigate the details of individual deploys
     - on the top of the deploys screen there will be a production and staging link
-    
+- View data updates pushed to your deploys
+    - production deployment
+    - staging deployment
+    - head deployment (most recent)
+    - previous production deployment
+    - once  a new deployment is made, all other deployments become inactive     
+- learn how data updates are streamed to deploys
+
+# Module 4
+## Create a locator
+- what a locator is
+    - its just google maps except not
+    - but no really why wouldn't I just use google maps? yext already intergrates with it??
+- add search to your yext account
+- learn how search UI react helps you build a store locators in a pages project
+- add search UI react to your project
+- okay so after doing that whole unit I really don't see why you wouldn't just use googles. you need to set up an API anyways. the only thing I think is cool is the custom icons.
+
+# Module 5
+## The yext directory manager
+- what directories are
+- how to build them using yext directory manager
+    - prepare your content
+    - configure the direcory manager
+    - run the directory manager
+    - develop your directory site localy
+    - deploy your directory sire to the platform
+ 
+# Module 6
+## Implement multi-language support
+- ov
