@@ -442,5 +442,35 @@
     - list the steps that search goes through to deliver results when a user runs a query
         1. User submits a search query
         2. Algorithm routes queries via federated search
+        3. Algorithm evaluates results in each vertical
+        4. Algorithm aggregates the results and sends them via the search API
+        5. Frontend assembles results for the user
     - recall that each vertical is evaluated by the search algorithm separately
     - explain that vertical results are combined and ranked on universal search 
+    - Recall the methods available to build on top of Search and their use cases
+        - search API
+        - search core
+        - search UI react
+        - hitchhikers theme
+    - Recognize which method of building the search frontend is right for you
+    - navigate to the screens used to manage the search backend and search frontend
+    - recall what types of information the all search experiences screen provides
+    - recall the types of configures found under the five categories of screens for the search backend configuration 
+        - test search
+        - verticals
+        - configuration
+        - analysis
+        - training
+        - deployment
+
+# Module 2
+## Search Config Overview
+- Define the search configuration
+- list features the configuration can control 
+    - Verticals
+        - define each type of content you want to search on and the specific settings for that class of content
+        - includes saved filters
+        - define what fields to search
+        - define how things should be ranked against other verticals
+    - Query suggestions
+        - 
