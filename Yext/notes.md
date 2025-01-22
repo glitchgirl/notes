@@ -384,11 +384,11 @@
 ## Create a locator
 - what a locator is
     - its just google maps except not
-    - but no really why wouldn't I just use google maps? yext already intergrates with it??
+    - but no really why wouldn't I just use google maps? yext already integrates with it??
 - add search to your yext account
 - learn how search UI react helps you build a store locators in a pages project
 - add search UI react to your project
-- okay so after doing that whole unit I really don't see why you wouldn't just use googles. you need to set up an API anyways. the only thing I think is cool is the custom icons.
+- okay so after doing that whole unit I really don't see why you wouldn't just use google's. you need to set up an API anyways. the only thing I think is cool is the custom icons.
 
 # Module 5
 ## The yext directory manager
@@ -402,4 +402,45 @@
  
 # Module 6
 ## Implement multi-language support
-- ov
+- Overview of multi-language pages
+- Steps needed to implement multi-language support on Pages 
+    - set up language profiles for content entities
+        - a language profile is a "view" into an entity, for example you could have an English version and a Spanish version of the same entity (i.e. the description would be in both languages)
+        - uses top level locales field
+    - configure streams to accept multiple profiles
+- Configure multi-lang entity profiles
+    - how to set up language profiles in the content
+    - how to configure slugs for multi-language pages
+    - how to edit content on an alternative language profile
+- Set up Multi-lang streams
+    - how to access language profile data in your Pages UI
+    - how to preview multi-lang pages
+- Advanced Multi-lang support
+
+
+|     |   SEARCH   |         |
+|-------------- |----------------|------------------ |
+
+# Module 1
+## Intro to search
+- What is a search experience
+    - define the three main components of search
+        - Search Backend: configures how the search algorithm determines which results are selected
+            - controlled by a search configuration 
+            - search algorithm
+        - Search Frontend: determines how results are displayed
+            - facets or other filtering for uses
+            - results cards
+            - you can use the default Yext or use React libraries
+        - Content: stores the entities and content 
+    - Search quality
+        - Content :tm: must be filed out correctly 
+        - you'll need to contact support if you want your algorithm touched
+    - describe how each of those components impacts the search experience and each other
+    - identify which component allows you to manage certain behaviors in Search
+- The Search Query Journey
+    - list the steps that search goes through to deliver results when a user runs a query
+        1. User submits a search query
+        2. Algorithm routes queries via federated search
+    - recall that each vertical is evaluated by the search algorithm separately
+    - explain that vertical results are combined and ranked on universal search 
