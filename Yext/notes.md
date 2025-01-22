@@ -369,7 +369,7 @@
         - multi page updates are parallelized 
 - learn how the process is structured for faster deployment and better performance
 - Deploy changes to github and your yext sites
-    - learn how to manage deploy preview, staging, and production lnks
+    - learn how to manage deploy preview, staging, and production links
     - navigate the details of individual deploys
     - on the top of the deploys screen there will be a production and staging link
-    
+
