@@ -473,4 +473,31 @@
         - define what fields to search
         - define how things should be ranked against other verticals
     - Query suggestions
-        - 
+    - Synonyms: you set these up for your business use (i.e. having both an acronym and the full spelling)
+    - Query rules - set these up if you want something that the algo doesn't auto populate (maybe you want to point people to a booking page more than what the algo suggests)
+    - General settings
+- Create and edit the search config
+    - demonstrate how to create a search config
+    - edit the search config using the UI and the JSON editor
+    - define configuration versions and configuration labels
+    - best practices for which versions to pin configuration labels too
+- Test search
+    - define test search
+    - key features
+- Overview of algorithm and indexing
+    - define tokens and explain how they impact ranking logic
+        - Tokens/ tokenization- breaking down a query into discrete units 
+        - stop words ```of, the, in``` these are just words humans use but don't mean a lot to the algo
+            - keyword search - given smaller weight
+            - inferred filter - can still be matched, but won't do just word
+            - semantic search - still be matched, might be returned if they are semantically similar
+        - custom phrases - this is set up if you know you have something that is close to something you don't want to show. for example a jeweler might want custom phrases about gold and diamonds to be unique so they don't overlap (karats)
+        - Search operators
+            - and, or, not, double quotes 
+    - explain how the multi-algorithm approach works
+        - structured data: phrase based searching
+        - unstructured data: keyword search and document search 
+        - entity ranking logic
+        - vertical ranking logic (most helpful for user's)
+    - state how the search algo ranks verticals
+
