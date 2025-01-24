@@ -501,3 +501,18 @@
         - vertical ranking logic (most helpful for user's)
     - state how the search algo ranks verticals
 
+# Module 5
+## Search Optimizations
+- Search requires continuous optimization
+- list types of search quality improvements you can make grouped by content issues, configuration issues, and algo issues
+- Debug the backend
+- describe the resources you have to debug the backend and what types of information you can get from each resource
+    - test serach
+    - serch log details
+    - seach query API responses
+    - experience training table     
+- navigate the platform to access these resources
+- Experience training
+    - defined what experience training is
+    - explain how you can use experience training for three features: featured snippets, inferred filters, and spell checking
+    - 
