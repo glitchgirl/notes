@@ -418,7 +418,7 @@
 - Advanced Multi-lang support
 
 
-|     |   SEARCH   |         |
+|     |   SEARCH  Backend |         |
 |-------------- |----------------|------------------ |
 
 # Module 1
@@ -515,4 +515,41 @@
 - Experience training
     - defined what experience training is
     - explain how you can use experience training for three features: featured snippets, inferred filters, and spell checking
-    - 
+- Search merchandiser
+    - define
+        - reorder entities
+        - reorder verticals
+        - change featured snippets
+    - demonstrate
+    - explain
+    - Query Rules for Reorder Entities and Verticals
+        - name
+        - criteria 
+        - action
+            - boost entities, bury entities, boost verticals, bury verticals
+        - can only have one query rule in the search merchandiser
+- Search terms and clusters
+    - define search teams and search term clusters
+        - search terms table gives you an overview of what users are searching for
+        - empty search term means a search query was ran with no search term
+        - search term clusters automatically group together search terms with similar meaning (i.e. how many ways to people look for a gift card balance)
+        - uses BERT (bidirectional encoder representations from transformers - complicated, look at the wiki if you want), then determines "closeness", then labels
+        - clustering runs on a weekly basis, using 120 days of previous search data
+        - cluster performance groups
+            - needs attention(less than 20% click through), large(more than 1% of total searches), small
+            - performing well, large, small 
+    - examine search terms and clusters to inform decisions on configuring search to improve search results 
+- Search analytics
+    - name the three buckets of key value drivers
+        - revenue generation
+            - chart type
+            - metrics
+            - dimensions
+            - filters
+        - customer intelligence
+        - cost savings
+    - list key metrics
+
+
+|     |   SEARCH  frontend |         |
+|-------------- |----------------|------------------ |
