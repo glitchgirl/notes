@@ -553,3 +553,10 @@
 
 |     |   SEARCH  frontend |         |
 |-------------- |----------------|------------------ |
+
+# Module 1
+## Intro to the search frontend theme
+- List and define the two main components of the search frontend
+- Explain the importance of Jambo and locate additional jambo resources
+- Recall the six steps of the jambo build process
+- this isn't important, but i think jambo is a stupid name.
