@@ -1,0 +1,38 @@
+Elements of High-Quality Programs
+- Declaring and using variables and constants
+    - numeric versus string 
+        - this is a little over simplified but yeah data is either a number or its not LOL
+        - integer
+        - floating-point
+        - declaration
+        - data type
+        - identifier 
+        - initializing the variable
+        - each language will have keywords you aren't allowed to use as variable names (i.e. string, int, function)
+        - naming conventions are important, but it doesn't matter which one you pick, just be consistent
+        - names should make sense
+        - assignment statements
+        - assignment operators (=)
+        - right associativity (what this means is, whatever is on the right hand side of the assignment operator is the value that will be assigned to the var on the left hand side)
+- Performing arithmetic
+       - remember order of operations applies when doing math so use () generously 
+        - = is assignment not equality. most languages use == or === to check for equality
+        - modulo operator
+- The advantages of modularization 
+    - use functions yo
+    - call your functions
+    - abstraction
+    - reusability
+    - reliability
+    - i understand why they are using module instead of function, but it's a little wonky
+    - scope
+- Modularizing a program
+- Hierarchy charts
+- Features of good program design
+    - use comments (this is such a spicy take in the work world, but vital for school)
+    - choose identifiers thoughtfully
+    - strive to design clear statements
+    - write clear prompts
+    - use good habits 
+    - i'd also add: TEST, TESTING INSTRUCTIONS, external documentation
+    

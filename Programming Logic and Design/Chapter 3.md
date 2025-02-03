@@ -1,0 +1,14 @@
+Understanding Structure
+- The disadvantages of unstructured spaghetti code (yummy)
+    - hard to follow, hard to build off of, hard to share with another person
+- the three basic structures - sequence, selections, and loop
+    - sequence (driving instructions)
+    - selection (make a choice)
+        - if, else and all the combinations between those
+    - loop
+        - while, do while, 
+    - can combine structures (i.e. while dirty dishes, clean dishes (if delicate handwash, else dishwasher))
+- using a priming input to structure a program
+- the need for structure
+- recognizing structure
+- structuring and modularizing unstructured logic 
