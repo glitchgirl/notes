@@ -1,3 +1,4 @@
+
 General notes: 
 - read the test carefully (lots of select twos/ NOTS)
 - look for keywords: server, client, backend, cache, frontend, ELB, ALB, NLB

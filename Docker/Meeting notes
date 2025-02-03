@@ -1,0 +1,8 @@
+Docker
+
+- we use it instead of a million vmware instances
+- there is a really nice graph that explains how all the pieces talk to each other
+- remember, inside the container the memory is voliate, so create a seperate db for database
+- orbstack versus desktop
+- octane uses github actions and runners, to handle the updates
+- because runners are shared, sometimes you can run into issues. mostly these can be fixed with waiting and re-running
