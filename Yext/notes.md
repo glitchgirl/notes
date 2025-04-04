@@ -1,3 +1,10 @@
+# April updates
+- Listings better screens
+- You can now view and respond to direct messages
+- Content is now renamed knowledge graph
+- To make Headshot photo behavior more consistent, all photos uploaded to the Headshot field will be stored as-is.
+- We’ve added the ability to export the display name (the Name field) of linked entities when performing an entity export. Previously, only the Yext ID and Entity ID of linked entities could be included in an export.
+
 # Module 1:
 ## The importance of Knowledge Graphs and Yext Content :tm:
 - What is a knowledge graph
