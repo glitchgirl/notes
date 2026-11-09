@@ -1,0 +1,51 @@
+These are my notes from reading design patterns
+Chap 1
+- Program to an interface not an implementation
+- Favor composition over inheritance
+- The strategy pattern defines a family of algorithms, encapsulates each one, and makes them interchangable. Strategy lets the algorithm vary indepentdently from the clients that use it.
+
+Chap 2
+- The observer pattern defines a one-to-many dependency between objects so that when one object changes start - all of the its dependents are notified and updated automatically.
+- Strive for loosely coupled designes between objects that interact
+
+Chap 3
+- Classes should be open for extension but closed for modification
+- The decorator pattern adds itws own behavior either before and/or after delagating to the object it decorates to do the rest of the job.
+- Decoraters provide a flexible alternative to subclassing for extending functionality.
+
+Chap 4
+- The factory method pattern defines an interface for creating an object but lets the subclass decide which class to instatiate. Factory method lets a class defer instantiation to a subclass
+- The abstract factory pattern provides an interface for creatng families of related or dependent classes. 
+- Factory method - define an interface for creating an object, but let the subclasses decide which class to instantaite. 
+
+Chap 5
+- The singleton pattern ensures a class has one instance and provides a a global point of access to it 
+
+Chap 6
+- The command pattern encapsulated a request as an object, thereby letting you paramaterize other objecsts with different requests, queues, or log requests, and supports undobable operations.
+- Sometimes we want to return "nothing" but we don't have the client to have null errors so we can return a null object. (safe nothing)
+
+Chap 7
+- The adapter pattern converts the interface of a class into another interface that the clients expect. Adapter lets calsses work together that couldn't otherwise due to incompataible interfaces.
+- The facade pattern provides a unifed interface to a set of interfaces in a subsystem. Facade defines a higher level interface taht makes the subsystem easier to use. 
+
+Chap 8
+- The template method pattern defines the skeleton of an algorithm in a method deferring some steps to subclasses. Template method lets subclasses redefine certain steps of an algorithm without changing the algorithms structure.
+
+Chap 9
+- The iterator pattern provides a way to access the elements of an aggregate object sequentially without exposing it's underlying representation. 
+- The composite pattern allows you to compose objects into tree structures to represent part-whole heirachies. 
+- This allows clients to treat individual objects and compositions of objects uniformally.
+
+Chap 10
+- The state pattern allows an object to alter its behavior when its internal state changes. This object will appear to change its class
+
+Chap 11
+- The proxy pattern provides a surrogate or placeholder for another object to controll access to it.
+
+Chap 12
+- The compound pattern combines two or more patterns into a solution that solves a reocurring problem or general problem.
+
+Chap 13
+- A pattern is a solution to a problem in a context
+- An anti-pattern tells you how to go from a problem to a bad solution.
